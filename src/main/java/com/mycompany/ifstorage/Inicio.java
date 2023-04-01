@@ -1,7 +1,12 @@
 package com.mycompany.ifstorage;
 import java.awt.Color;
+import java.awt.Frame;
+import static java.awt.Frame.MAXIMIZED_BOTH;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionAdapter;
+import javax.swing.JFrame;
+
 
 
 /**
@@ -26,7 +31,13 @@ public class Inicio extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        pnlTopBar = new javax.swing.JPanel();
+        pnlActions = new javax.swing.JPanel();
+        lblMin = new javax.swing.JLabel();
+        lblMax = new javax.swing.JLabel();
+        lblExit = new javax.swing.JLabel();
+        pnlFundo = new javax.swing.JPanel();
+        pnlBarraLetarl = new javax.swing.JPanel();
         lblLogo = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         pnlRelatorio = new javax.swing.JPanel();
@@ -37,13 +48,115 @@ public class Inicio extends javax.swing.JFrame {
         lblDados = new javax.swing.JLabel();
         pnlCardapio = new javax.swing.JPanel();
         lblCardapio = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
+        pnlContent = new javax.swing.JPanel();
         lblLogo_fundo = new javax.swing.JLabel();
-        lblTextLogo = new javax.swing.JLabel();
+        lblTextLogo_fundo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        setName("Home"); // NOI18N
+        setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(23, 136, 44));
+        pnlTopBar.setBackground(new java.awt.Color(23, 136, 44));
+        pnlTopBar.setLayout(new java.awt.BorderLayout());
+
+        pnlActions.setMaximumSize(new java.awt.Dimension(150, 30));
+        pnlActions.setOpaque(false);
+
+        lblMin.setBackground(new java.awt.Color(23, 136, 44));
+        lblMin.setIcon(new javax.swing.ImageIcon("D:\\CursoJava\\Prototipo-iFstorage\\src\\main\\java\\com\\mycompany\\ifstorage\\images\\mim.png")); // NOI18N
+        lblMin.setOpaque(true);
+        lblMin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                lblMinMousePressed(evt);
+            }
+        });
+        pnlActions.add(lblMin);
+        // Adicionar o MouseListener ao JPanel pnlMenu
+
+        lblMin.addMouseListener(new MouseAdapter() {
+            private Color hoverColor = new Color(18, 65, 31); // Definir a nova cor de fundo ao passar o mouse
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                lblMin.setBackground(hoverColor);
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                lblMin.setBackground(new Color(23, 136, 44));
+            }
+        });
+
+        lblMax.setBackground(new java.awt.Color(23, 136, 44));
+        lblMax.setIcon(new javax.swing.ImageIcon("D:\\CursoJava\\Prototipo-iFstorage\\src\\main\\java\\com\\mycompany\\ifstorage\\images\\max.png")); // NOI18N
+        lblMax.setOpaque(true);
+        lblMax.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                lblMaxMousePressed(evt);
+            }
+        });
+        pnlActions.add(lblMax);
+        // Adicionar o MouseListener ao JPanel pnlMenu
+        lblMax.addMouseListener(new MouseAdapter() {
+            private Color hoverColor = new Color(18, 65, 31); // Definir a nova cor de fundo ao passar o mouse
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                lblMax.setBackground(hoverColor);
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                lblMax.setBackground(new Color(23, 136, 44));
+            }
+        });
+
+        lblExit.setBackground(new java.awt.Color(23, 136, 44));
+        lblExit.setIcon(new javax.swing.ImageIcon("D:\\CursoJava\\Prototipo-iFstorage\\src\\main\\java\\com\\mycompany\\ifstorage\\images\\exit.png")); // NOI18N
+        lblExit.setOpaque(true);
+        lblExit.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                lblExitMousePressed(evt);
+            }
+        });
+        pnlActions.add(lblExit);
+        lblExit.getAccessibleContext().setAccessibleName("");
+        // Adicionar o MouseListener ao JPanel pnlMenu
+        lblExit.addMouseListener(new MouseAdapter() {
+            private Color hoverColor = new Color(255, 10, 10); // Definir a nova cor de fundo ao passar o mouse
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                lblExit.setBackground(hoverColor);
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                lblExit.setBackground(new Color(23, 136, 44));
+            }
+        });
+
+        pnlTopBar.add(pnlActions, java.awt.BorderLayout.LINE_END);
+
+        getContentPane().add(pnlTopBar, java.awt.BorderLayout.PAGE_START);
+        pnlTopBar.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseDragged(java.awt.event.MouseEvent evt) {
+                pnlTopBarMouseDragged(evt);
+            }
+        });
+        pnlTopBar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                pnlTopBarMouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pnlTopBarMousePressed(evt);
+            }
+        });
+
+        pnlFundo.setBackground(new java.awt.Color(255, 255, 255));
+
+        pnlBarraLetarl.setBackground(new java.awt.Color(23, 136, 44));
 
         lblLogo.setIcon(new javax.swing.ImageIcon("D:\\CursoJava\\New Folder\\ifstorage\\src\\main\\java\\com\\mycompany\\ifstorage\\images\\logo.png")); // NOI18N
 
@@ -140,30 +253,30 @@ public class Inicio extends javax.swing.JFrame {
             .addComponent(lblCardapio, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnlBarraLetarlLayout = new javax.swing.GroupLayout(pnlBarraLetarl);
+        pnlBarraLetarl.setLayout(pnlBarraLetarlLayout);
+        pnlBarraLetarlLayout.setHorizontalGroup(
+            pnlBarraLetarlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlBarraLetarlLayout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(pnlBarraLetarlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblLogo)
+                    .addGroup(pnlBarraLetarlLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlBarraLetarlLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(pnlBarraLetarlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(pnlMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pnlDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pnlCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(pnlRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap())
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblLogo)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        pnlBarraLetarlLayout.setVerticalGroup(
+            pnlBarraLetarlLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlBarraLetarlLayout.createSequentialGroup()
                 .addGap(75, 75, 75)
                 .addComponent(lblLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
@@ -256,54 +369,125 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
 
-        lblLogo_fundo.setIcon(new javax.swing.ImageIcon("D:\\CursoJava\\New Folder\\ifstorage\\src\\main\\java\\com\\mycompany\\ifstorage\\images\\logo_fundo.png")); // NOI18N
+        pnlContent.setBackground(new java.awt.Color(255, 255, 255));
 
-        lblTextLogo.setFont(new java.awt.Font("Segoe UI", 1, 60)); // NOI18N
-        lblTextLogo.setForeground(new java.awt.Color(186, 204, 192));
-        lblTextLogo.setText("iFstorage");
+        lblLogo_fundo.setIcon(new javax.swing.ImageIcon("D:\\CursoJava\\Prototipo-iFstorage\\src\\main\\java\\com\\mycompany\\ifstorage\\images\\logo_fundo.png")); // NOI18N
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(489, Short.MAX_VALUE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblTextLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 294, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblLogo_fundo))
-                .addGap(273, 273, 273))
+        lblTextLogo_fundo.setFont(new java.awt.Font("Segoe UI", 1, 60)); // NOI18N
+        lblTextLogo_fundo.setForeground(new java.awt.Color(154, 176, 160));
+        lblTextLogo_fundo.setText("iFstorage");
+
+        javax.swing.GroupLayout pnlContentLayout = new javax.swing.GroupLayout(pnlContent);
+        pnlContent.setLayout(pnlContentLayout);
+        pnlContentLayout.setHorizontalGroup(
+            pnlContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlContentLayout.createSequentialGroup()
+                .addGap(335, 335, 335)
+                .addGroup(pnlContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlContentLayout.createSequentialGroup()
+                        .addComponent(lblLogo_fundo, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(162, 162, 162))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlContentLayout.createSequentialGroup()
+                        .addComponent(lblTextLogo_fundo, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(196, 196, 196))))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(179, Short.MAX_VALUE)
-                .addComponent(lblLogo_fundo)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(lblTextLogo)
-                .addGap(257, 257, 257))
+        pnlContentLayout.setVerticalGroup(
+            pnlContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlContentLayout.createSequentialGroup()
+                .addGap(122, 122, 122)
+                .addComponent(lblLogo_fundo, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lblTextLogo_fundo, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(160, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        javax.swing.GroupLayout pnlFundoLayout = new javax.swing.GroupLayout(pnlFundo);
+        pnlFundo.setLayout(pnlFundoLayout);
+        pnlFundoLayout.setHorizontalGroup(
+            pnlFundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlFundoLayout.createSequentialGroup()
+                .addComponent(pnlBarraLetarl, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(pnlContent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+        pnlFundoLayout.setVerticalGroup(
+            pnlFundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pnlBarraLetarl, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(pnlFundoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(pnlContent, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        getContentPane().add(pnlFundo, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void lblMaxMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMaxMousePressed
+        if (Inicio.this.getExtendedState() == MAXIMIZED_BOTH) {
+            Inicio.this.setExtendedState(JFrame.NORMAL);
+        } else {
+            Inicio.this.setExtendedState(MAXIMIZED_BOTH);
+        }
+    }//GEN-LAST:event_lblMaxMousePressed
+
+    private void lblExitMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblExitMousePressed
+        System.exit(0);
+    }//GEN-LAST:event_lblExitMousePressed
+
+    private void lblMinMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMinMousePressed
+        Inicio.this.setState(Frame.ICONIFIED);
+    }//GEN-LAST:event_lblMinMousePressed
+
+    
+    //Funções para Movimenta janela
+    
+    int xy, xx;
+    
+    private void pnlTopBarMousePressed(java.awt.event.MouseEvent evt) {                                    
+        xx = evt.getX();
+        xy = evt.getY();
+    }                                   
+
+    private void pnlTopBarMouseClicked(java.awt.event.MouseEvent evt) {                                    
+        if (evt.getClickCount() == 2 && !evt.isConsumed()) {
+            if (Inicio.this.getExtendedState() == MAXIMIZED_BOTH) {
+                Inicio.this.setExtendedState(JFrame.NORMAL);
+            } else {
+                Inicio.this.setExtendedState(MAXIMIZED_BOTH);
+            }
+        }
+    }                                   
+
+    private void pnlTopBarMouseDragged(java.awt.event.MouseEvent evt) {                                    
+        int x = evt.getXOnScreen();
+        int y = evt.getYOnScreen();
+        this.setLocation(x - xx, y - xy);
+    } 
+    
+    //Fim das funções para movimenta janela
+    
+    
+    /*Funções para que os botões maximizar, minimizar e close funcionem
+    
+    private void lblCloseMousePressed(java.awt.event.MouseEvent evt) {                                      
+        System.exit(0);
+    }                                     
+
+    private void lblMaximizeMousePressed(java.awt.event.MouseEvent evt) {                                         
+        if (Inicio.this.getExtendedState() == MAXIMIZED_BOTH) {
+            Inicio.this.setExtendedState(JFrame.NORMAL);
+        } else {
+            Inicio.this.setExtendedState(MAXIMIZED_BOTH);
+        }
+    }                                        
+
+    private void lblMinimizeMousePressed(java.awt.event.MouseEvent evt) {                                         
+        Inicio.this.setState(Frame.ICONIFIED);
+    }  
+    
+    */
+    
     /**
      * @param args the command line arguments
      */
@@ -341,18 +525,24 @@ public class Inicio extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JLabel lblCardapio;
     private javax.swing.JLabel lblDados;
+    private javax.swing.JLabel lblExit;
     private javax.swing.JLabel lblLogo;
     private javax.swing.JLabel lblLogo_fundo;
+    private javax.swing.JLabel lblMax;
     private javax.swing.JLabel lblMenu;
+    private javax.swing.JLabel lblMin;
     private javax.swing.JLabel lblRelatorio;
-    private javax.swing.JLabel lblTextLogo;
+    private javax.swing.JLabel lblTextLogo_fundo;
+    private javax.swing.JPanel pnlActions;
+    private javax.swing.JPanel pnlBarraLetarl;
     private javax.swing.JPanel pnlCardapio;
+    private javax.swing.JPanel pnlContent;
     private javax.swing.JPanel pnlDados;
+    private javax.swing.JPanel pnlFundo;
     private javax.swing.JPanel pnlMenu;
     private javax.swing.JPanel pnlRelatorio;
+    private javax.swing.JPanel pnlTopBar;
     // End of variables declaration//GEN-END:variables
 }
