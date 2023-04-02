@@ -13,12 +13,12 @@ import javax.swing.JFrame;
  *
  * @author khadu
  */
-public class Inicio extends javax.swing.JFrame {
+public class InformacoesSobre extends javax.swing.JFrame {
 
     /**
      * Creates new form Inicio
      */
-    public Inicio() {
+    public InformacoesSobre() {
         initComponents();
     }
 
@@ -49,8 +49,10 @@ public class Inicio extends javax.swing.JFrame {
         pnlCardapio = new javax.swing.JPanel();
         lblCardapio = new javax.swing.JLabel();
         pnlContent = new javax.swing.JPanel();
-        lblLogo_fundo = new javax.swing.JLabel();
-        lblTextLogo_fundo = new javax.swing.JLabel();
+        pnlInfoAbout = new javax.swing.JPanel();
+        lblInfoAbout = new javax.swing.JLabel();
+        lblInfoAboutProd = new javax.swing.JButton();
+        lblInfoAboutFornecedores = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -292,7 +294,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(pnlCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, 0)
                 .addComponent(pnlRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(229, Short.MAX_VALUE))
         );
 
         //Definindo coloração
@@ -374,35 +376,66 @@ public class Inicio extends javax.swing.JFrame {
 
         pnlContent.setBackground(new java.awt.Color(255, 255, 255));
 
-        lblLogo_fundo.setIcon(new javax.swing.ImageIcon("C:\\Users\\franc\\OneDrive\\Documentos\\Franck\\Faculdade\\Prototipo-iFstorage\\src\\main\\java\\com\\mycompany\\ifstorage\\images\\logo_fundo.png")); // NOI18N
-        lblLogo_fundo.setLabelFor(lblLogo_fundo);
+        pnlInfoAbout.setBackground(new java.awt.Color(255, 255, 255));
+        pnlInfoAbout.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), null, null));
 
-        lblTextLogo_fundo.setFont(new java.awt.Font("Segoe UI", 1, 60)); // NOI18N
-        lblTextLogo_fundo.setForeground(new java.awt.Color(154, 176, 160));
-        lblTextLogo_fundo.setText("iFstorage");
+        lblInfoAbout.setFont(new java.awt.Font("Segoe UI", 0, 60)); // NOI18N
+        lblInfoAbout.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblInfoAbout.setText("Deseja ver informações sobre:");
+
+        lblInfoAboutProd.setBackground(new java.awt.Color(23, 136, 44));
+        lblInfoAboutProd.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblInfoAboutProd.setForeground(new java.awt.Color(255, 255, 255));
+        lblInfoAboutProd.setText("Produtos");
+
+        lblInfoAboutFornecedores.setBackground(new java.awt.Color(23, 136, 44));
+        lblInfoAboutFornecedores.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblInfoAboutFornecedores.setForeground(new java.awt.Color(255, 255, 255));
+        lblInfoAboutFornecedores.setText("Fornecedores");
+
+        javax.swing.GroupLayout pnlInfoAboutLayout = new javax.swing.GroupLayout(pnlInfoAbout);
+        pnlInfoAbout.setLayout(pnlInfoAboutLayout);
+        pnlInfoAboutLayout.setHorizontalGroup(
+            pnlInfoAboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlInfoAboutLayout.createSequentialGroup()
+                .addGroup(pnlInfoAboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlInfoAboutLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lblInfoAbout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(pnlInfoAboutLayout.createSequentialGroup()
+                        .addGap(319, 319, 319)
+                        .addComponent(lblInfoAboutFornecedores, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(112, 112, 112)
+                        .addComponent(lblInfoAboutProd, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 336, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        pnlInfoAboutLayout.setVerticalGroup(
+            pnlInfoAboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlInfoAboutLayout.createSequentialGroup()
+                .addContainerGap(105, Short.MAX_VALUE)
+                .addComponent(lblInfoAbout)
+                .addGap(18, 18, 18)
+                .addGroup(pnlInfoAboutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblInfoAboutFornecedores, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblInfoAboutProd, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(83, 83, 83))
+        );
 
         javax.swing.GroupLayout pnlContentLayout = new javax.swing.GroupLayout(pnlContent);
         pnlContent.setLayout(pnlContentLayout);
         pnlContentLayout.setHorizontalGroup(
             pnlContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlContentLayout.createSequentialGroup()
-                .addGap(335, 335, 335)
-                .addGroup(pnlContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlContentLayout.createSequentialGroup()
-                        .addComponent(lblLogo_fundo, javax.swing.GroupLayout.PREFERRED_SIZE, 348, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(162, 162, 162))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlContentLayout.createSequentialGroup()
-                        .addComponent(lblTextLogo_fundo, javax.swing.GroupLayout.PREFERRED_SIZE, 293, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(196, 196, 196))))
+                .addComponent(pnlInfoAbout, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
         pnlContentLayout.setVerticalGroup(
             pnlContentLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlContentLayout.createSequentialGroup()
-                .addGap(122, 122, 122)
-                .addComponent(lblLogo_fundo, javax.swing.GroupLayout.PREFERRED_SIZE, 330, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(lblTextLogo_fundo, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(160, Short.MAX_VALUE))
+                .addGap(174, 174, 174)
+                .addComponent(pnlInfoAbout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout pnlFundoLayout = new javax.swing.GroupLayout(pnlFundo);
@@ -429,10 +462,10 @@ public class Inicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void lblMaxMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMaxMousePressed
-        if (Inicio.this.getExtendedState() == MAXIMIZED_BOTH) {
-            Inicio.this.setExtendedState(JFrame.NORMAL);
+        if (InformacoesSobre.this.getExtendedState() == MAXIMIZED_BOTH) {
+            InformacoesSobre.this.setExtendedState(JFrame.NORMAL);
         } else {
-            Inicio.this.setExtendedState(MAXIMIZED_BOTH);
+            InformacoesSobre.this.setExtendedState(MAXIMIZED_BOTH);
         }
     }//GEN-LAST:event_lblMaxMousePressed
 
@@ -441,7 +474,7 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_lblExitMousePressed
 
     private void lblMinMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lblMinMousePressed
-        Inicio.this.setState(Frame.ICONIFIED);
+        InformacoesSobre.this.setState(Frame.ICONIFIED);
     }//GEN-LAST:event_lblMinMousePressed
 
     
@@ -456,10 +489,10 @@ public class Inicio extends javax.swing.JFrame {
 
     private void pnlTopBarMouseClicked(java.awt.event.MouseEvent evt) {                                    
         if (evt.getClickCount() == 2 && !evt.isConsumed()) {
-            if (Inicio.this.getExtendedState() == MAXIMIZED_BOTH) {
-                Inicio.this.setExtendedState(JFrame.NORMAL);
+            if (InformacoesSobre.this.getExtendedState() == MAXIMIZED_BOTH) {
+                InformacoesSobre.this.setExtendedState(JFrame.NORMAL);
             } else {
-                Inicio.this.setExtendedState(MAXIMIZED_BOTH);
+                InformacoesSobre.this.setExtendedState(MAXIMIZED_BOTH);
             }
         }
     }                                   
@@ -510,20 +543,21 @@ public class Inicio extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InformacoesSobre.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InformacoesSobre.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InformacoesSobre.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Inicio.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(InformacoesSobre.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Inicio().setVisible(true);
+                new InformacoesSobre().setVisible(true);
             }
         });
     }
@@ -533,19 +567,21 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel lblCardapio;
     private javax.swing.JLabel lblDados;
     private javax.swing.JLabel lblExit;
+    private javax.swing.JLabel lblInfoAbout;
+    private javax.swing.JButton lblInfoAboutFornecedores;
+    private javax.swing.JButton lblInfoAboutProd;
     private javax.swing.JLabel lblLogo;
-    private javax.swing.JLabel lblLogo_fundo;
     private javax.swing.JLabel lblMax;
     private javax.swing.JLabel lblMenu;
     private javax.swing.JLabel lblMin;
     private javax.swing.JLabel lblRelatorio;
-    private javax.swing.JLabel lblTextLogo_fundo;
     private javax.swing.JPanel pnlActions;
     private javax.swing.JPanel pnlBarraLetarl;
     private javax.swing.JPanel pnlCardapio;
     private javax.swing.JPanel pnlContent;
     private javax.swing.JPanel pnlDados;
     private javax.swing.JPanel pnlFundo;
+    private javax.swing.JPanel pnlInfoAbout;
     private javax.swing.JPanel pnlMenu;
     private javax.swing.JPanel pnlRelatorio;
     private javax.swing.JPanel pnlTopBar;
