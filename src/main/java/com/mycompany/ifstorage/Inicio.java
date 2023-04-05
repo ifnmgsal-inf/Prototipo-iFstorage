@@ -8,6 +8,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.UIManager;
 
 
 
@@ -99,9 +100,21 @@ public class Inicio extends javax.swing.JFrame {
         lblBackgroundImage = new javax.swing.JLabel();
         lblTextLogo_fundo = new javax.swing.JLabel();
         pnlAboutInfo = new javax.swing.JPanel();
-        lblInfoAboutProd1 = new javax.swing.JButton();
-        lblInfoAboutFornecedores1 = new javax.swing.JButton();
+        btnInfoAboutProd1 = new javax.swing.JButton();
+        btnInfoAboutFornecedores1 = new javax.swing.JButton();
         lblInfoAbout1 = new javax.swing.JLabel();
+        pnlCardapioOpt = new javax.swing.JPanel();
+        btnCarapioInfo1 = new javax.swing.JButton();
+        btnCardapioInfo2 = new javax.swing.JButton();
+        lblCardapioInfo = new javax.swing.JLabel();
+        pnlReportOpt = new javax.swing.JPanel();
+        btnReportOpt1 = new javax.swing.JButton();
+        btnReportOpt2 = new javax.swing.JButton();
+        lblReportOpt = new javax.swing.JLabel();
+        btnReportOpt3 = new javax.swing.JButton();
+        btnReportOpt4 = new javax.swing.JButton();
+        btnReportOpt5 = new javax.swing.JButton();
+        btnReportOpt6 = new javax.swing.JButton();
 
         pnlInfoAbout.setBackground(new java.awt.Color(255, 255, 255));
         pnlInfoAbout.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), null, null));
@@ -167,7 +180,6 @@ public class Inicio extends javax.swing.JFrame {
         pnlActions.setOpaque(false);
 
         lblMin.setBackground(new java.awt.Color(23, 136, 44));
-        lblMin.setIcon(new javax.swing.ImageIcon("D:\\CursoJava\\Prototipo-iFstorage\\src\\main\\java\\com\\mycompany\\ifstorage\\images\\mim.png")); // NOI18N
         lblMin.setLabelFor(lblMin);
         lblMin.setOpaque(true);
         lblMin.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -193,7 +205,6 @@ public class Inicio extends javax.swing.JFrame {
         });
 
         lblMax.setBackground(new java.awt.Color(23, 136, 44));
-        lblMax.setIcon(new javax.swing.ImageIcon("D:\\CursoJava\\Prototipo-iFstorage\\src\\main\\java\\com\\mycompany\\ifstorage\\images\\max.png")); // NOI18N
         lblMax.setLabelFor(lblMax);
         lblMax.setOpaque(true);
         lblMax.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -218,7 +229,6 @@ public class Inicio extends javax.swing.JFrame {
         });
 
         lblExit.setBackground(new java.awt.Color(23, 136, 44));
-        lblExit.setIcon(new javax.swing.ImageIcon("D:\\CursoJava\\Prototipo-iFstorage\\src\\main\\java\\com\\mycompany\\ifstorage\\images\\exit.png")); // NOI18N
         lblExit.setLabelFor(lblExit);
         lblExit.setOpaque(true);
         lblExit.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -276,7 +286,6 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
 
-        lblLogo.setIcon(new javax.swing.ImageIcon("D:\\CursoJava\\Prototipo-iFstorage\\src\\main\\java\\com\\mycompany\\ifstorage\\images\\logo.png")); // NOI18N
         lblLogo.setLabelFor(lblLogo);
 
         lblTextLogo.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -344,6 +353,14 @@ public class Inicio extends javax.swing.JFrame {
 
         pnlCardapio.setBackground(new java.awt.Color(23, 136, 44));
         pnlCardapio.setForeground(new java.awt.Color(255, 255, 255));
+        pnlCardapio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                pnlCardapioMouseExited(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pnlCardapioMousePressed(evt);
+            }
+        });
 
         lblCardapio.setBackground(new java.awt.Color(0, 0, 0));
         lblCardapio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -366,6 +383,11 @@ public class Inicio extends javax.swing.JFrame {
 
         pnlRelatorio.setBackground(new java.awt.Color(23, 136, 44));
         pnlRelatorio.setForeground(new java.awt.Color(255, 255, 255));
+        pnlRelatorio.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pnlRelatorioMousePressed(evt);
+            }
+        });
 
         lblRelatorio.setBackground(new java.awt.Color(0, 0, 0));
         lblRelatorio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
@@ -425,7 +447,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(pnlCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnlRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(144, Short.MAX_VALUE))
+                .addContainerGap(162, Short.MAX_VALUE))
         );
 
         //Definindo coloração
@@ -485,12 +507,17 @@ public class Inicio extends javax.swing.JFrame {
 
             @Override
             public void mouseEntered(MouseEvent e) {
-                pnlCardapio.setBackground(hoverColor);
+                if(!pnlCardapio.getBackground().equals(new Color(54, 176, 160))){
+                    pnlCardapio.setBackground(hoverColor);
+                }
+
             }
 
             @Override
             public void mouseExited(MouseEvent e) {
-                pnlCardapio.setBackground(originalColor);
+                if(!pnlCardapio.getBackground().equals(new Color(54, 176, 160))){
+                    pnlCardapio.setBackground(originalColor);
+                }
             }
         });
         //Definindo coloração
@@ -504,20 +531,23 @@ public class Inicio extends javax.swing.JFrame {
 
             @Override
             public void mouseEntered(MouseEvent e) {
-                pnlRelatorio.setBackground(hoverColor);
+                if(!pnlRelatorio.getBackground().equals(new Color(54, 176, 160))){
+                    pnlRelatorio.setBackground(hoverColor);
+                }
+
             }
 
             @Override
             public void mouseExited(MouseEvent e) {
-                pnlRelatorio.setBackground(originalColor);
+                if(!pnlRelatorio.getBackground().equals(new Color(54, 176, 160))){
+                    pnlRelatorio.setBackground(originalColor);
+                }
             }
         });
 
         pnlFundo.add(pnlBarraLeteral, java.awt.BorderLayout.LINE_START);
 
         pnlContent.setLayout(new java.awt.CardLayout());
-
-        lblBackgroundImage.setIcon(new javax.swing.ImageIcon("D:\\CursoJava\\Prototipo-iFstorage\\src\\main\\java\\com\\mycompany\\ifstorage\\images\\logo_fundo.png")); // NOI18N
 
         lblTextLogo_fundo.setFont(new java.awt.Font("Segoe UI", 1, 60)); // NOI18N
         lblTextLogo_fundo.setForeground(new java.awt.Color(154, 176, 160));
@@ -544,20 +574,20 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(lblBackgroundImage)
                 .addGap(18, 18, 18)
                 .addComponent(lblTextLogo_fundo, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(105, Short.MAX_VALUE))
+                .addContainerGap(443, Short.MAX_VALUE))
         );
 
         pnlContent.add(pnlDefaultScreen, "card1");
 
-        lblInfoAboutProd1.setBackground(new java.awt.Color(23, 136, 44));
-        lblInfoAboutProd1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        lblInfoAboutProd1.setForeground(new java.awt.Color(255, 255, 255));
-        lblInfoAboutProd1.setText("Produtos");
+        btnInfoAboutProd1.setBackground(new java.awt.Color(23, 136, 44));
+        btnInfoAboutProd1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnInfoAboutProd1.setForeground(new java.awt.Color(255, 255, 255));
+        btnInfoAboutProd1.setText("Produtos");
 
-        lblInfoAboutFornecedores1.setBackground(new java.awt.Color(23, 136, 44));
-        lblInfoAboutFornecedores1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        lblInfoAboutFornecedores1.setForeground(new java.awt.Color(255, 255, 255));
-        lblInfoAboutFornecedores1.setText("Fornecedores");
+        btnInfoAboutFornecedores1.setBackground(new java.awt.Color(23, 136, 44));
+        btnInfoAboutFornecedores1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnInfoAboutFornecedores1.setForeground(new java.awt.Color(255, 255, 255));
+        btnInfoAboutFornecedores1.setText("Fornecedores");
 
         lblInfoAbout1.setFont(new java.awt.Font("Segoe UI", 0, 60)); // NOI18N
         lblInfoAbout1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -573,9 +603,9 @@ public class Inicio extends javax.swing.JFrame {
                 .addGap(137, 137, 137))
             .addGroup(pnlAboutInfoLayout.createSequentialGroup()
                 .addGap(305, 305, 305)
-                .addComponent(lblInfoAboutFornecedores1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnInfoAboutFornecedores1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(114, 114, 114)
-                .addComponent(lblInfoAboutProd1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnInfoAboutProd1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlAboutInfoLayout.setVerticalGroup(
@@ -585,12 +615,143 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(lblInfoAbout1)
                 .addGap(72, 72, 72)
                 .addGroup(pnlAboutInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblInfoAboutFornecedores1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblInfoAboutProd1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(244, Short.MAX_VALUE))
+                    .addComponent(btnInfoAboutFornecedores1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnInfoAboutProd1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(262, Short.MAX_VALUE))
         );
 
         pnlContent.add(pnlAboutInfo, "card2");
+
+        btnCarapioInfo1.setBackground(new java.awt.Color(23, 136, 44));
+        btnCarapioInfo1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnCarapioInfo1.setForeground(new java.awt.Color(255, 255, 255));
+        btnCarapioInfo1.setText("Ver Cardápio");
+
+        btnCardapioInfo2.setBackground(new java.awt.Color(23, 136, 44));
+        btnCardapioInfo2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnCardapioInfo2.setForeground(new java.awt.Color(255, 255, 255));
+        btnCardapioInfo2.setText("Criar Cardápio");
+
+        lblCardapioInfo.setFont(new java.awt.Font("Segoe UI", 0, 60)); // NOI18N
+        lblCardapioInfo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblCardapioInfo.setText("Escolha uma Opção");
+
+        javax.swing.GroupLayout pnlCardapioOptLayout = new javax.swing.GroupLayout(pnlCardapioOpt);
+        pnlCardapioOpt.setLayout(pnlCardapioOptLayout);
+        pnlCardapioOptLayout.setHorizontalGroup(
+            pnlCardapioOptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlCardapioOptLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblCardapioInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(pnlCardapioOptLayout.createSequentialGroup()
+                .addGap(315, 315, 315)
+                .addComponent(btnCardapioInfo2, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(96, 96, 96)
+                .addComponent(btnCarapioInfo1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(315, Short.MAX_VALUE))
+        );
+        pnlCardapioOptLayout.setVerticalGroup(
+            pnlCardapioOptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlCardapioOptLayout.createSequentialGroup()
+                .addGap(196, 196, 196)
+                .addComponent(lblCardapioInfo)
+                .addGap(75, 75, 75)
+                .addGroup(pnlCardapioOptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCardapioInfo2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnCarapioInfo1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(262, Short.MAX_VALUE))
+        );
+
+        pnlContent.add(pnlCardapioOpt, "card3");
+
+        btnReportOpt1.setBackground(new java.awt.Color(23, 136, 44));
+        btnReportOpt1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnReportOpt1.setForeground(new java.awt.Color(255, 255, 255));
+        btnReportOpt1.setText("Produtos em Estoque");
+
+        btnReportOpt2.setBackground(new java.awt.Color(23, 136, 44));
+        btnReportOpt2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnReportOpt2.setForeground(new java.awt.Color(255, 255, 255));
+        btnReportOpt2.setText("Fornecedores");
+
+        lblReportOpt.setFont(new java.awt.Font("Segoe UI", 0, 60)); // NOI18N
+        lblReportOpt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblReportOpt.setText("Deseja gerar relatórios sobre:");
+
+        btnReportOpt3.setBackground(new java.awt.Color(23, 136, 44));
+        btnReportOpt3.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnReportOpt3.setForeground(new java.awt.Color(255, 255, 255));
+        btnReportOpt3.setText("Empenho");
+
+        btnReportOpt4.setBackground(new java.awt.Color(23, 136, 44));
+        btnReportOpt4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnReportOpt4.setForeground(new java.awt.Color(255, 255, 255));
+        btnReportOpt4.setText("Cardápio");
+
+        btnReportOpt5.setBackground(new java.awt.Color(23, 136, 44));
+        btnReportOpt5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnReportOpt5.setForeground(new java.awt.Color(255, 255, 255));
+        btnReportOpt5.setText("Produtos Entregues");
+        btnReportOpt5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReportOpt5ActionPerformed(evt);
+            }
+        });
+
+        btnReportOpt6.setBackground(new java.awt.Color(23, 136, 44));
+        btnReportOpt6.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnReportOpt6.setForeground(new java.awt.Color(255, 255, 255));
+        btnReportOpt6.setText("Produtos devolvidos");
+
+        javax.swing.GroupLayout pnlReportOptLayout = new javax.swing.GroupLayout(pnlReportOpt);
+        pnlReportOpt.setLayout(pnlReportOptLayout);
+        pnlReportOptLayout.setHorizontalGroup(
+            pnlReportOptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlReportOptLayout.createSequentialGroup()
+                .addGroup(pnlReportOptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlReportOptLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lblReportOpt, javax.swing.GroupLayout.DEFAULT_SIZE, 1134, Short.MAX_VALUE))
+                    .addGroup(pnlReportOptLayout.createSequentialGroup()
+                        .addGroup(pnlReportOptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlReportOptLayout.createSequentialGroup()
+                                .addGap(202, 202, 202)
+                                .addGroup(pnlReportOptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(btnReportOpt2, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(btnReportOpt1, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(pnlReportOptLayout.createSequentialGroup()
+                                .addGap(203, 203, 203)
+                                .addComponent(btnReportOpt3, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(88, 88, 88)
+                        .addGroup(pnlReportOptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnReportOpt4, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnReportOpt5, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnReportOpt6, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        pnlReportOptLayout.setVerticalGroup(
+            pnlReportOptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlReportOptLayout.createSequentialGroup()
+                .addGap(196, 196, 196)
+                .addComponent(lblReportOpt)
+                .addGap(75, 75, 75)
+                .addGroup(pnlReportOptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnReportOpt2, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnReportOpt5, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addGroup(pnlReportOptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnReportOpt1, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnReportOpt4, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(30, 30, 30)
+                .addGroup(pnlReportOptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnReportOpt3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnReportOpt6, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(95, Short.MAX_VALUE))
+        );
+
+        pnlContent.add(pnlReportOpt, "card4");
 
         pnlFundo.add(pnlContent, java.awt.BorderLayout.CENTER);
 
@@ -652,6 +813,32 @@ public class Inicio extends javax.swing.JFrame {
         cardLayout.show(pnlContent, "card1");
     }//GEN-LAST:event_pnlMenuMousePressed
 
+    private void pnlCardapioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCardapioMousePressed
+        setColor(pnlCardapio);
+        resetColor(pnlDados);
+        resetColor(pnlMenu);
+        resetColor(pnlRelatorio);
+
+        cardLayout.show(pnlContent, "card3");
+    }//GEN-LAST:event_pnlCardapioMousePressed
+
+    private void btnReportOpt5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReportOpt5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnReportOpt5ActionPerformed
+
+    private void pnlCardapioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCardapioMouseExited
+        
+    }//GEN-LAST:event_pnlCardapioMouseExited
+
+    private void pnlRelatorioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlRelatorioMousePressed
+        resetColor(pnlCardapio);
+        resetColor(pnlDados);
+        resetColor(pnlMenu);
+        setColor(pnlRelatorio);
+
+        cardLayout.show(pnlContent, "card4");
+    }//GEN-LAST:event_pnlRelatorioMousePressed
+
     
     public static void main(String args[]) {
         
@@ -663,21 +850,33 @@ public class Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCarapioInfo1;
+    private javax.swing.JButton btnCardapioInfo2;
+    private javax.swing.JButton btnInfoAboutFornecedores1;
+    private javax.swing.JButton btnInfoAboutProd1;
+    private javax.swing.JButton btnReportOpt1;
+    private javax.swing.JButton btnReportOpt2;
+    private javax.swing.JButton btnReportOpt3;
+    private javax.swing.JButton btnReportOpt4;
+    private javax.swing.JButton btnReportOpt5;
+    private javax.swing.JButton btnReportOpt6;
     private javax.swing.JLabel lblBackgroundImage;
     private javax.swing.JLabel lblCardapio;
+    private javax.swing.JLabel lblCardapioInfo;
     private javax.swing.JLabel lblDados;
+    private javax.swing.JLabel lblDados1;
+    private javax.swing.JLabel lblDados2;
     private javax.swing.JLabel lblExit;
     private javax.swing.JLabel lblInfoAbout;
     private javax.swing.JLabel lblInfoAbout1;
     private javax.swing.JButton lblInfoAboutFornecedores;
-    private javax.swing.JButton lblInfoAboutFornecedores1;
     private javax.swing.JButton lblInfoAboutProd;
-    private javax.swing.JButton lblInfoAboutProd1;
     private javax.swing.JLabel lblLogo;
     private javax.swing.JLabel lblMax;
     private javax.swing.JLabel lblMenu;
     private javax.swing.JLabel lblMin;
     private javax.swing.JLabel lblRelatorio;
+    private javax.swing.JLabel lblReportOpt;
     private javax.swing.JLabel lblTextLogo;
     private javax.swing.JLabel lblTextLogo_fundo;
     private javax.swing.JLabel lblVersion;
@@ -685,13 +884,17 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JPanel pnlActions;
     private javax.swing.JPanel pnlBarraLeteral;
     private javax.swing.JPanel pnlCardapio;
+    private javax.swing.JPanel pnlCardapioOpt;
     private javax.swing.JPanel pnlContent;
     private javax.swing.JPanel pnlDados;
+    private javax.swing.JPanel pnlDados1;
+    private javax.swing.JPanel pnlDados2;
     private javax.swing.JPanel pnlDefaultScreen;
     private javax.swing.JPanel pnlFundo;
     private javax.swing.JPanel pnlInfoAbout;
     private javax.swing.JPanel pnlMenu;
     private javax.swing.JPanel pnlRelatorio;
+    private javax.swing.JPanel pnlReportOpt;
     private javax.swing.JPanel pnlTopBar;
     // End of variables declaration//GEN-END:variables
 }

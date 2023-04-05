@@ -163,9 +163,6 @@
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="2c" green="88" red="17" type="rgb"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\CursoJava\Prototipo-iFstorage\src\main\java\com\mycompany\ifstorage\images\mim.png"/>
-                </Property>
                 <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="lblMin"/>
                 </Property>
@@ -183,9 +180,6 @@
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="2c" green="88" red="17" type="rgb"/>
                 </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\CursoJava\Prototipo-iFstorage\src\main\java\com\mycompany\ifstorage\images\max.png"/>
-                </Property>
                 <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="lblMax"/>
                 </Property>
@@ -202,9 +196,6 @@
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="2c" green="88" red="17" type="rgb"/>
-                </Property>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\CursoJava\Prototipo-iFstorage\src\main\java\com\mycompany\ifstorage\images\exit.png"/>
                 </Property>
                 <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="lblExit"/>
@@ -302,7 +293,7 @@
                       <Component id="pnlCardapio" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="pnlRelatorio" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="144" max="32767" attributes="0"/>
+                      <EmptySpace pref="162" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -310,9 +301,6 @@
           <SubComponents>
             <Component class="javax.swing.JLabel" name="lblLogo">
               <Properties>
-                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="D:\CursoJava\Prototipo-iFstorage\src\main\java\com\mycompany\ifstorage\images\logo.png"/>
-                </Property>
                 <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="lblLogo"/>
                 </Property>
@@ -450,8 +438,12 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pnlCardapioMouseExited"/>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pnlCardapioMousePressed"/>
+              </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Definindo colora&#xe7;&#xe3;o&#xa;pnlCardapio.setBackground(new java.awt.Color(23, 136, 44));&#xa;pnlCardapio.setForeground(new java.awt.Color(255, 255, 255));&#xa;&#xa;// Adicionar o MouseListener ao JPanel pnlMenu&#xa;pnlCardapio.addMouseListener(new MouseAdapter() {&#xa;    private Color originalColor = pnlCardapio.getBackground();&#xa;    private Color hoverColor = new Color(20, 122, 40); // Definir a nova cor de fundo ao passar o mouse&#xa;&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        pnlCardapio.setBackground(hoverColor);&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        pnlCardapio.setBackground(originalColor);&#xa;    }&#xa;});"/>
+                <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Definindo colora&#xe7;&#xe3;o&#xa;pnlCardapio.setBackground(new java.awt.Color(23, 136, 44));&#xa;pnlCardapio.setForeground(new java.awt.Color(255, 255, 255));&#xa;&#xa;// Adicionar o MouseListener ao JPanel pnlMenu&#xa;pnlCardapio.addMouseListener(new MouseAdapter() {&#xa;    private Color originalColor = pnlCardapio.getBackground();&#xa;    private Color hoverColor = new Color(20, 122, 40); // Definir a nova cor de fundo ao passar o mouse&#xa;&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        if(!pnlCardapio.getBackground().equals(new Color(54, 176, 160))){&#xa;            pnlCardapio.setBackground(hoverColor);&#xa;        }&#xa;        &#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        if(!pnlCardapio.getBackground().equals(new Color(54, 176, 160))){&#xa;            pnlCardapio.setBackground(originalColor);&#xa;        }&#xa;    }&#xa;});"/>
               </AuxValues>
 
               <Layout>
@@ -496,8 +488,11 @@
                   <Color blue="ff" green="ff" red="ff" type="rgb"/>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="pnlRelatorioMousePressed"/>
+              </Events>
               <AuxValues>
-                <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Definindo colora&#xe7;&#xe3;o&#xa;pnlRelatorio.setBackground(new java.awt.Color(23, 136, 44));&#xa;pnlRelatorio.setForeground(new java.awt.Color(255, 255, 255));&#xa;&#xa;// Adicionar o MouseListener ao JPanel pnlMenu&#xa;pnlRelatorio.addMouseListener(new MouseAdapter() {&#xa;    private Color originalColor = pnlRelatorio.getBackground();&#xa;    private Color hoverColor = new Color(20, 122, 40); // Definir a nova cor de fundo ao passar o mouse&#xa;&#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        pnlRelatorio.setBackground(hoverColor);&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        pnlRelatorio.setBackground(originalColor);&#xa;    }&#xa;});"/>
+                <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="//Definindo colora&#xe7;&#xe3;o&#xa;pnlRelatorio.setBackground(new java.awt.Color(23, 136, 44));&#xa;pnlRelatorio.setForeground(new java.awt.Color(255, 255, 255));&#xa;&#xa;// Adicionar o MouseListener ao JPanel pnlMenu&#xa;pnlRelatorio.addMouseListener(new MouseAdapter() {&#xa;    private Color originalColor = pnlRelatorio.getBackground();&#xa;    private Color hoverColor = new Color(20, 122, 40); // Definir a nova cor de fundo ao passar o mouse&#xa;    &#xa;    @Override&#xa;    public void mouseEntered(MouseEvent e) {&#xa;        if(!pnlRelatorio.getBackground().equals(new Color(54, 176, 160))){&#xa;            pnlRelatorio.setBackground(hoverColor);&#xa;        }&#xa;&#xa;    }&#xa;&#xa;    @Override&#xa;    public void mouseExited(MouseEvent e) {&#xa;        if(!pnlRelatorio.getBackground().equals(new Color(54, 176, 160))){&#xa;            pnlRelatorio.setBackground(originalColor);&#xa;        }&#xa;    }&#xa;});"/>
               </AuxValues>
 
               <Layout>
@@ -576,18 +571,13 @@
                           <Component id="lblBackgroundImage" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="lblTextLogo_fundo" min="-2" pref="95" max="-2" attributes="0"/>
-                          <EmptySpace pref="105" max="32767" attributes="0"/>
+                          <EmptySpace pref="443" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="lblBackgroundImage">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="D:\CursoJava\Prototipo-iFstorage\src\main\java\com\mycompany\ifstorage\images\logo_fundo.png"/>
-                    </Property>
-                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lblTextLogo_fundo">
                   <Properties>
@@ -619,9 +609,9 @@
                       </Group>
                       <Group type="102" attributes="0">
                           <EmptySpace min="-2" pref="305" max="-2" attributes="0"/>
-                          <Component id="lblInfoAboutFornecedores1" min="-2" pref="184" max="-2" attributes="0"/>
+                          <Component id="btnInfoAboutFornecedores1" min="-2" pref="184" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="114" max="-2" attributes="0"/>
-                          <Component id="lblInfoAboutProd1" min="-2" pref="184" max="-2" attributes="0"/>
+                          <Component id="btnInfoAboutProd1" min="-2" pref="184" max="-2" attributes="0"/>
                           <EmptySpace max="32767" attributes="0"/>
                       </Group>
                   </Group>
@@ -633,16 +623,16 @@
                           <Component id="lblInfoAbout1" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="lblInfoAboutFornecedores1" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
-                              <Component id="lblInfoAboutProd1" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
+                              <Component id="btnInfoAboutFornecedores1" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
+                              <Component id="btnInfoAboutProd1" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="244" max="32767" attributes="0"/>
+                          <EmptySpace pref="262" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
-                <Component class="javax.swing.JButton" name="lblInfoAboutProd1">
+                <Component class="javax.swing.JButton" name="btnInfoAboutProd1">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2c" green="88" red="17" type="rgb"/>
@@ -656,7 +646,7 @@
                     <Property name="text" type="java.lang.String" value="Produtos"/>
                   </Properties>
                 </Component>
-                <Component class="javax.swing.JButton" name="lblInfoAboutFornecedores1">
+                <Component class="javax.swing.JButton" name="btnInfoAboutFornecedores1">
                   <Properties>
                     <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                       <Color blue="2c" green="88" red="17" type="rgb"/>
@@ -677,6 +667,252 @@
                     </Property>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="text" type="java.lang.String" value="Deseja ver informa&#xe7;&#xf5;es sobre:"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="pnlCardapioOpt">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                  <CardConstraints cardName="card3"/>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="lblCardapioInfo" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="315" max="-2" attributes="0"/>
+                          <Component id="btnCardapioInfo2" min="-2" pref="210" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="96" max="-2" attributes="0"/>
+                          <Component id="btnCarapioInfo1" min="-2" pref="210" max="-2" attributes="0"/>
+                          <EmptySpace pref="315" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="196" max="-2" attributes="0"/>
+                          <Component id="lblCardapioInfo" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="btnCardapioInfo2" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
+                              <Component id="btnCarapioInfo1" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="262" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JButton" name="btnCarapioInfo1">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="2c" green="88" red="17" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="24" style="0"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Ver Card&#xe1;pio"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="btnCardapioInfo2">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="2c" green="88" red="17" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="24" style="0"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Criar Card&#xe1;pio"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblCardapioInfo">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="60" style="0"/>
+                    </Property>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="text" type="java.lang.String" value="Escolha uma Op&#xe7;&#xe3;o"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="pnlReportOpt">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignCardLayout" value="org.netbeans.modules.form.compat2.layouts.DesignCardLayout$CardConstraintsDescription">
+                  <CardConstraints cardName="card4"/>
+                </Constraint>
+              </Constraints>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Component id="lblReportOpt" pref="1134" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="202" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="btnReportOpt2" alignment="0" min="-2" pref="327" max="-2" attributes="0"/>
+                                              <Component id="btnReportOpt1" alignment="0" min="-2" pref="327" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="203" max="-2" attributes="0"/>
+                                          <Component id="btnReportOpt3" min="-2" pref="327" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="88" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="btnReportOpt4" min="-2" pref="327" max="-2" attributes="0"/>
+                                      <Component id="btnReportOpt5" min="-2" pref="327" max="-2" attributes="0"/>
+                                      <Component id="btnReportOpt6" min="-2" pref="327" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="196" max="-2" attributes="0"/>
+                          <Component id="lblReportOpt" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="btnReportOpt2" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
+                              <Component id="btnReportOpt5" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="btnReportOpt1" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
+                              <Component id="btnReportOpt4" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="btnReportOpt3" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
+                              <Component id="btnReportOpt6" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace pref="95" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JButton" name="btnReportOpt1">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="2c" green="88" red="17" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="24" style="0"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Produtos em Estoque"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="btnReportOpt2">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="2c" green="88" red="17" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="24" style="0"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Fornecedores"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="lblReportOpt">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="60" style="0"/>
+                    </Property>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="text" type="java.lang.String" value="Deseja gerar relat&#xf3;rios sobre:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="btnReportOpt3">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="2c" green="88" red="17" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="24" style="0"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Empenho"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="btnReportOpt4">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="2c" green="88" red="17" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="24" style="0"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Card&#xe1;pio"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="btnReportOpt5">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="2c" green="88" red="17" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="24" style="0"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Produtos Entregues"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnReportOpt5ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JButton" name="btnReportOpt6">
+                  <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="2c" green="88" red="17" type="rgb"/>
+                    </Property>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Segoe UI" size="24" style="0"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="Produtos devolvidos"/>
                   </Properties>
                 </Component>
               </SubComponents>
