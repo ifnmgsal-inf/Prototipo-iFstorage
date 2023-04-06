@@ -134,7 +134,6 @@ public class InFornecedor extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void tfCampoCNPJActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfCampoCNPJActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_tfCampoCNPJActionPerformed
     
     //Funções para Movimenta janela
@@ -153,7 +152,6 @@ public class InFornecedor extends javax.swing.JFrame {
     }//GEN-LAST:event_lblAdicionaFornecedorTitleMouseDragged
 
     private void btnCancelarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCancelarMousePressed
-        //System.exit(0);
         this.dispose();
     }//GEN-LAST:event_btnCancelarMousePressed
 

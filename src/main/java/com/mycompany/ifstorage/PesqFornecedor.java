@@ -56,7 +56,7 @@ public class PesqFornecedor extends javax.swing.JFrame {
         btnPesquisar.setBackground(new java.awt.Color(25, 81, 40));
         btnPesquisar.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnPesquisar.setForeground(new java.awt.Color(255, 255, 255));
-        btnPesquisar.setText("Pesquisar");
+        btnPesquisar.setText("PESQUISAR");
         btnPesquisar.setBorder(null);
 
         btnCancelar.setBackground(new java.awt.Color(144, 2, 8));
@@ -125,7 +125,6 @@ public class PesqFornecedor extends javax.swing.JFrame {
     }//GEN-LAST:event_lblPesquisaTitleMousePressed
 
     private void btnCancelarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCancelarMousePressed
-        //System.exit(0);
         this.dispose();
     }//GEN-LAST:event_btnCancelarMousePressed
 

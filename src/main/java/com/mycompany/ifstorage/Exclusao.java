@@ -56,7 +56,7 @@ public class Exclusao extends javax.swing.JFrame {
         btnExcluir.setBackground(new java.awt.Color(255, 140, 0));
         btnExcluir.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnExcluir.setForeground(new java.awt.Color(255, 255, 255));
-        btnExcluir.setText("Excluir");
+        btnExcluir.setText("EXCLUIR");
         btnExcluir.setBorder(null);
 
         btnCancelar.setBackground(new java.awt.Color(25, 81, 40));
@@ -133,7 +133,6 @@ public class Exclusao extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCancelarMousePressed
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     /**

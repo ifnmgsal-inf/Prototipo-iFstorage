@@ -1,17 +1,13 @@
 package com.mycompany.ifstorage;
 import java.awt.CardLayout;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Frame;
 import static java.awt.Frame.MAXIMIZED_BOTH;
-import java.awt.Toolkit;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseMotionAdapter;
 import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.UIManager;
 
 
 
@@ -552,7 +548,7 @@ public class Inicio extends javax.swing.JFrame {
         pnlDefaultScreenLayout.setHorizontalGroup(
             pnlDefaultScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlDefaultScreenLayout.createSequentialGroup()
-                .addContainerGap(481, Short.MAX_VALUE)
+                .addContainerGap(490, Short.MAX_VALUE)
                 .addGroup(pnlDefaultScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlDefaultScreenLayout.createSequentialGroup()
                         .addComponent(lblBackgroundImage)
@@ -613,7 +609,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(btnInfoAboutFornecedores, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(81, 81, 81)
                 .addComponent(btnInfoAboutProd, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(346, Short.MAX_VALUE))
+                .addContainerGap(355, Short.MAX_VALUE))
             .addComponent(lblInfoAbout1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         pnlOptionsInfoLayout.setVerticalGroup(
@@ -641,6 +637,11 @@ public class Inicio extends javax.swing.JFrame {
         btnDeleteItemProd.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnDeleteItemProd.setForeground(new java.awt.Color(255, 255, 255));
         btnDeleteItemProd.setText("Deletar");
+        btnDeleteItemProd.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnDeleteItemProdMousePressed(evt);
+            }
+        });
         btnDeleteItemProd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteItemProdActionPerformed(evt);
@@ -651,6 +652,11 @@ public class Inicio extends javax.swing.JFrame {
         btnPesquisaProd.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnPesquisaProd.setForeground(new java.awt.Color(255, 255, 255));
         btnPesquisaProd.setText("Pesquisar");
+        btnPesquisaProd.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnPesquisaProdMousePressed(evt);
+            }
+        });
         btnPesquisaProd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPesquisaProdActionPerformed(evt);
@@ -661,6 +667,11 @@ public class Inicio extends javax.swing.JFrame {
         btnAdicionaProd.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnAdicionaProd.setForeground(new java.awt.Color(255, 255, 255));
         btnAdicionaProd.setText("Adicionar");
+        btnAdicionaProd.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnAdicionaProdMousePressed(evt);
+            }
+        });
         btnAdicionaProd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAdicionaProdActionPerformed(evt);
@@ -671,6 +682,11 @@ public class Inicio extends javax.swing.JFrame {
         btnEditarProd.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnEditarProd.setForeground(new java.awt.Color(255, 255, 255));
         btnEditarProd.setText("Editar");
+        btnEditarProd.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnEditarProdMousePressed(evt);
+            }
+        });
 
         tblProdutos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         tblProdutos.setModel(new javax.swing.table.DefaultTableModel(
@@ -750,6 +766,12 @@ public class Inicio extends javax.swing.JFrame {
         });
         tblProdutos.setShowGrid(true);
         scrlTabProdutos.setViewportView(tblProdutos);
+        if (tblProdutos.getColumnModel().getColumnCount() > 0) {
+            tblProdutos.getColumnModel().getColumn(0).setPreferredWidth(130);
+            tblProdutos.getColumnModel().getColumn(0).setMaxWidth(150);
+            tblProdutos.getColumnModel().getColumn(3).setPreferredWidth(130);
+            tblProdutos.getColumnModel().getColumn(3).setMaxWidth(150);
+        }
 
         javax.swing.GroupLayout pnlProdutosInfoLayout = new javax.swing.GroupLayout(pnlProdutosInfo);
         pnlProdutosInfo.setLayout(pnlProdutosInfoLayout);
@@ -764,11 +786,11 @@ public class Inicio extends javax.swing.JFrame {
                         .addComponent(btnEditarProd, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(60, 60, 60)
                         .addComponent(btnAdicionaProd, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
-                        .addComponent(btnPesquisaProd, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(60, 60, 60)
+                        .addComponent(btnPesquisaProd, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
                         .addComponent(btnDeleteItemProd, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
+                        .addGap(18, 18, 18))))
         );
         pnlProdutosInfoLayout.setVerticalGroup(
             pnlProdutosInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -904,7 +926,7 @@ public class Inicio extends javax.swing.JFrame {
                         .addComponent(btnEditarForn, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(60, 60, 60)
                         .addComponent(btnAdicionaForne, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
                         .addComponent(btnPesquisaForne, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(60, 60, 60)
                         .addComponent(btnDeleteItemForne, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -971,7 +993,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(btnVerCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(81, 81, 81)
                 .addComponent(btnCriarCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(346, Short.MAX_VALUE))
+                .addContainerGap(355, Short.MAX_VALUE))
             .addGroup(pnlCardapioInfoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblCardapioInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1062,7 +1084,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(btnEditarCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(98, 98, 98)
                 .addComponent(btnDeletarCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(133, Short.MAX_VALUE))
+                .addContainerGap(142, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlVerCardapioLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(scrlTabCardapio)
@@ -1214,7 +1236,7 @@ public class Inicio extends javax.swing.JFrame {
         pnlCardapioSegunda.setLayout(pnlCardapioSegundaLayout);
         pnlCardapioSegundaLayout.setHorizontalGroup(
             pnlCardapioSegundaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblCardapioSegunda, javax.swing.GroupLayout.DEFAULT_SIZE, 1211, Short.MAX_VALUE)
+            .addComponent(lblCardapioSegunda, javax.swing.GroupLayout.DEFAULT_SIZE, 1220, Short.MAX_VALUE)
             .addGroup(pnlCardapioSegundaLayout.createSequentialGroup()
                 .addGap(155, 155, 155)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1287,7 +1309,7 @@ public class Inicio extends javax.swing.JFrame {
                     .addComponent(btnReportOpt4, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnReportOpt5, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnReportOpt6, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(229, Short.MAX_VALUE))
+                .addContainerGap(238, Short.MAX_VALUE))
             .addComponent(lblReportOpt, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         pnlReportOptLayout.setVerticalGroup(
@@ -1432,10 +1454,8 @@ public class Inicio extends javax.swing.JFrame {
 
      //Definindo ações para os botões da tabela de forncedores
     private void btnAdicionaForneMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdicionaForneMousePressed
-        // TODO add your handling code here:
         InFornecedor forn = new InFornecedor();
         
-                
         forn.setVisible(true);
         forn.setSize(457, 400);
         forn.setLocationRelativeTo(null); // Centraliza o JFrame na tela
@@ -1473,9 +1493,7 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_btnDeleteItemForneMousePressed
 
     private void btnEditarFornMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditarFornMousePressed
-        // TODO add your handling code here:
         InFornecedor forn = new InFornecedor();
-        
                 
         forn.setVisible(true);
         forn.setSize(457, 400);
@@ -1492,6 +1510,59 @@ public class Inicio extends javax.swing.JFrame {
 
     private void btnVerCardapioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerCardapioActionPerformed
     }//GEN-LAST:event_btnVerCardapioActionPerformed
+
+    private void btnDeleteItemProdMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDeleteItemProdMousePressed
+        Exclusao excl = new Exclusao();
+        
+        excl.setVisible(true);
+        excl.setSize(457, 400);
+        excl.setLocationRelativeTo(null); // Centraliza o JFrame na tela
+        excl.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        excl.setAlwaysOnTop(true);
+        
+        JPanel contentPane = (JPanel) excl.getContentPane();
+        contentPane.setBorder(BorderFactory.createLineBorder(Color.black));
+    }//GEN-LAST:event_btnDeleteItemProdMousePressed
+
+    private void btnPesquisaProdMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPesquisaProdMousePressed
+        PesqProduto pesq = new PesqProduto();
+        
+        pesq.setVisible(true);
+        pesq.setSize(457, 400);
+        pesq.setLocationRelativeTo(null); // Centraliza o JFrame na tela
+        pesq.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        pesq.setAlwaysOnTop(true);
+        
+        JPanel contentPane = (JPanel) pesq.getContentPane();
+        contentPane.setBorder(BorderFactory.createLineBorder(Color.black));
+    }//GEN-LAST:event_btnPesquisaProdMousePressed
+
+    private void btnAdicionaProdMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdicionaProdMousePressed
+        InProduto prod = new InProduto();
+        
+                
+        prod.setVisible(true);
+        prod.setSize(457, 400);
+        prod.setLocationRelativeTo(null); // Centraliza o JFrame na tela
+        prod.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        prod.setAlwaysOnTop(true);
+        
+        JPanel contentPane = (JPanel) prod.getContentPane();
+        contentPane.setBorder(BorderFactory.createLineBorder(Color.black));
+    }//GEN-LAST:event_btnAdicionaProdMousePressed
+
+    private void btnEditarProdMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditarProdMousePressed
+        InProduto prod = new InProduto();
+                
+        prod.setVisible(true);
+        prod.setSize(457, 400);
+        prod.setLocationRelativeTo(null); // Centraliza o JFrame na tela
+        prod.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        prod.setAlwaysOnTop(true);
+        
+        JPanel contentPane = (JPanel) prod.getContentPane();
+        contentPane.setBorder(BorderFactory.createLineBorder(Color.black));
+    }//GEN-LAST:event_btnEditarProdMousePressed
 
     
     public static void main(String args[]) {
