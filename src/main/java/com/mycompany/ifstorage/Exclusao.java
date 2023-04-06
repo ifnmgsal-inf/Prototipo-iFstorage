@@ -170,7 +170,7 @@ public class Exclusao extends javax.swing.JFrame {
                 exclusao.setVisible(true);
                 exclusao.setSize(457, 400);
                 exclusao.setLocationRelativeTo(null); // Centraliza o JFrame na tela
-                exclusao.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                exclusao.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE );
             }
         });
     }

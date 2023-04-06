@@ -125,7 +125,8 @@ public class PesqFornecedor extends javax.swing.JFrame {
     }//GEN-LAST:event_lblPesquisaTitleMousePressed
 
     private void btnCancelarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCancelarMousePressed
-        System.exit(0);
+        //System.exit(0);
+        this.dispose();
     }//GEN-LAST:event_btnCancelarMousePressed
 
     /**
@@ -164,7 +165,7 @@ public class PesqFornecedor extends javax.swing.JFrame {
                 pesqFornecedor.setVisible(true);
                 pesqFornecedor.setSize(457, 400);
                 pesqFornecedor.setLocationRelativeTo(null); // Centraliza o JFrame na tela
-                pesqFornecedor.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                pesqFornecedor.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE );
             }
         });
     }

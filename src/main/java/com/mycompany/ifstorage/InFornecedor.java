@@ -153,7 +153,8 @@ public class InFornecedor extends javax.swing.JFrame {
     }//GEN-LAST:event_lblAdicionaFornecedorTitleMouseDragged
 
     private void btnCancelarMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCancelarMousePressed
-        System.exit(0);
+        //System.exit(0);
+        this.dispose();
     }//GEN-LAST:event_btnCancelarMousePressed
 
     /**
@@ -192,7 +193,7 @@ public class InFornecedor extends javax.swing.JFrame {
                 fornecedor.setVisible(true);
                 fornecedor.setSize(457, 400);
                 fornecedor.setLocationRelativeTo(null); // Centraliza o JFrame na tela
-                fornecedor.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                fornecedor.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
             }
         });
     }
