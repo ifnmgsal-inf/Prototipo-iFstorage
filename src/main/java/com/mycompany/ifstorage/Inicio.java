@@ -113,7 +113,7 @@ public class Inicio extends javax.swing.JFrame {
         btnDeleteItemProd = new javax.swing.JButton();
         btnPesquisaProd = new javax.swing.JButton();
         btnAdicionaProd = new javax.swing.JButton();
-        btnAtualizaProd = new javax.swing.JButton();
+        btnEditarProd = new javax.swing.JButton();
         scrlTabProdutos = new javax.swing.JScrollPane();
         tblProdutos = new javax.swing.JTable();
         pnlFornecedoresInfo = new javax.swing.JPanel();
@@ -121,7 +121,7 @@ public class Inicio extends javax.swing.JFrame {
         btnDeleteItemForne = new javax.swing.JButton();
         btnPesquisaForne = new javax.swing.JButton();
         btnAdicionaForne = new javax.swing.JButton();
-        btnAtualizaForne = new javax.swing.JButton();
+        btnEditarForn = new javax.swing.JButton();
         scrlTabFornecedores = new javax.swing.JScrollPane();
         tblFornecedores = new javax.swing.JTable();
         pnlCardapioOpt = new javax.swing.JPanel();
@@ -659,10 +659,10 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
 
-        btnAtualizaProd.setBackground(new java.awt.Color(0, 102, 0));
-        btnAtualizaProd.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnAtualizaProd.setForeground(new java.awt.Color(255, 255, 255));
-        btnAtualizaProd.setText("Atualizar");
+        btnEditarProd.setBackground(new java.awt.Color(0, 102, 0));
+        btnEditarProd.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnEditarProd.setForeground(new java.awt.Color(255, 255, 255));
+        btnEditarProd.setText("Editar");
 
         tblProdutos.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         tblProdutos.setModel(new javax.swing.table.DefaultTableModel(
@@ -753,14 +753,14 @@ public class Inicio extends javax.swing.JFrame {
                 .addGroup(pnlProdutosInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(scrlTabProdutos)
                     .addGroup(pnlProdutosInfoLayout.createSequentialGroup()
-                        .addComponent(btnAtualizaProd, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
+                        .addComponent(btnEditarProd, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(60, 60, 60)
                         .addComponent(btnAdicionaProd, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                         .addComponent(btnPesquisaProd, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(60, 60, 60)
                         .addComponent(btnDeleteItemProd, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 115, Short.MAX_VALUE))))
+                        .addContainerGap())))
         );
         pnlProdutosInfoLayout.setVerticalGroup(
             pnlProdutosInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -768,12 +768,12 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(lblProdutosTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(pnlProdutosInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAtualizaProd)
+                    .addComponent(btnEditarProd)
                     .addComponent(btnAdicionaProd)
                     .addComponent(btnPesquisaProd)
                     .addComponent(btnDeleteItemProd))
                 .addGap(18, 18, 18)
-                .addComponent(scrlTabProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, 682, Short.MAX_VALUE))
+                .addComponent(scrlTabProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE))
         );
 
         pnlAboutInfo.add(pnlProdutosInfo, "DadosCard3");
@@ -830,13 +830,13 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
 
-        btnAtualizaForne.setBackground(new java.awt.Color(0, 102, 0));
-        btnAtualizaForne.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnAtualizaForne.setForeground(new java.awt.Color(255, 255, 255));
-        btnAtualizaForne.setText("Atualizar");
-        btnAtualizaForne.addMouseListener(new java.awt.event.MouseAdapter() {
+        btnEditarForn.setBackground(new java.awt.Color(0, 102, 0));
+        btnEditarForn.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnEditarForn.setForeground(new java.awt.Color(255, 255, 255));
+        btnEditarForn.setText("Editar");
+        btnEditarForn.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
-                btnAtualizaForneMousePressed(evt);
+                btnEditarFornMousePressed(evt);
             }
         });
 
@@ -891,7 +891,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addGroup(pnlFornecedoresInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(scrlTabFornecedores)
                     .addGroup(pnlFornecedoresInfoLayout.createSequentialGroup()
-                        .addComponent(btnAtualizaForne, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnEditarForn, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26)
                         .addComponent(btnAdicionaForne, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26)
@@ -906,7 +906,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(lblFornecedoresTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(pnlFornecedoresInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnAtualizaForne)
+                    .addComponent(btnEditarForn)
                     .addComponent(btnAdicionaForne)
                     .addComponent(btnPesquisaForne)
                     .addComponent(btnDeleteItemForne))
@@ -1480,7 +1480,7 @@ public class Inicio extends javax.swing.JFrame {
         contentPane.setBorder(BorderFactory.createLineBorder(Color.black));
     }//GEN-LAST:event_btnDeleteItemForneMousePressed
 
-    private void btnAtualizaForneMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAtualizaForneMousePressed
+    private void btnEditarFornMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditarFornMousePressed
         // TODO add your handling code here:
         InFornecedor forn = new InFornecedor();
         
@@ -1493,7 +1493,7 @@ public class Inicio extends javax.swing.JFrame {
         
         JPanel contentPane = (JPanel) forn.getContentPane();
         contentPane.setBorder(BorderFactory.createLineBorder(Color.black));
-    }//GEN-LAST:event_btnAtualizaForneMousePressed
+    }//GEN-LAST:event_btnEditarFornMousePressed
 
     
     public static void main(String args[]) {
@@ -1508,13 +1508,13 @@ public class Inicio extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdicionaForne;
     private javax.swing.JButton btnAdicionaProd;
-    private javax.swing.JButton btnAtualizaForne;
-    private javax.swing.JButton btnAtualizaProd;
     private javax.swing.JButton btnCriarCardapio;
     private javax.swing.JButton btnDeletarCardapio;
     private javax.swing.JButton btnDeleteItemForne;
     private javax.swing.JButton btnDeleteItemProd;
     private javax.swing.JButton btnEditarCardapio;
+    private javax.swing.JButton btnEditarForn;
+    private javax.swing.JButton btnEditarProd;
     private javax.swing.JButton btnEscolhaQuarta;
     private javax.swing.JButton btnEscolhaQuinta;
     private javax.swing.JButton btnEscolhaSegunda;

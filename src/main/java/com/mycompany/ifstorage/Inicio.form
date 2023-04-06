@@ -648,14 +648,14 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="scrlTabProdutos" alignment="0" max="32767" attributes="0"/>
                                   <Group type="102" alignment="0" attributes="0">
-                                      <Component id="btnAtualizaProd" min="-2" pref="254" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                      <Component id="btnEditarProd" min="-2" pref="254" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                                       <Component id="btnAdicionaProd" min="-2" pref="254" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                      <EmptySpace pref="59" max="32767" attributes="0"/>
                                       <Component id="btnPesquisaProd" min="-2" pref="254" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                                       <Component id="btnDeleteItemProd" min="-2" pref="254" max="-2" attributes="0"/>
-                                      <EmptySpace min="0" pref="115" max="32767" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -667,13 +667,13 @@
                               <Component id="lblProdutosTitle" min="-2" pref="54" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="btnAtualizaProd" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnEditarProd" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="btnAdicionaProd" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="btnPesquisaProd" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="btnDeleteItemProd" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="scrlTabProdutos" pref="682" max="32767" attributes="0"/>
+                              <Component id="scrlTabProdutos" pref="700" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -746,7 +746,7 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAdicionaProdActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="btnAtualizaProd">
+                    <Component class="javax.swing.JButton" name="btnEditarProd">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="0" green="66" red="0" type="rgb"/>
@@ -757,7 +757,7 @@
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Atualizar"/>
+                        <Property name="text" type="java.lang.String" value="Editar"/>
                       </Properties>
                     </Component>
                     <Container class="javax.swing.JScrollPane" name="scrlTabProdutos">
@@ -824,7 +824,7 @@
                               <Group type="103" groupAlignment="0" attributes="0">
                                   <Component id="scrlTabFornecedores" max="32767" attributes="0"/>
                                   <Group type="102" attributes="0">
-                                      <Component id="btnAtualizaForne" min="-2" pref="254" max="-2" attributes="0"/>
+                                      <Component id="btnEditarForn" min="-2" pref="254" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                                       <Component id="btnAdicionaForne" min="-2" pref="254" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
@@ -843,7 +843,7 @@
                               <Component id="lblFornecedoresTitle" min="-2" pref="54" max="-2" attributes="0"/>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
-                                  <Component id="btnAtualizaForne" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="btnEditarForn" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="btnAdicionaForne" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="btnPesquisaForne" alignment="3" min="-2" max="-2" attributes="0"/>
                                   <Component id="btnDeleteItemForne" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -925,7 +925,7 @@
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAdicionaForneActionPerformed"/>
                       </Events>
                     </Component>
-                    <Component class="javax.swing.JButton" name="btnAtualizaForne">
+                    <Component class="javax.swing.JButton" name="btnEditarForn">
                       <Properties>
                         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="0" green="66" red="0" type="rgb"/>
@@ -936,10 +936,10 @@
                         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                           <Color blue="ff" green="ff" red="ff" type="rgb"/>
                         </Property>
-                        <Property name="text" type="java.lang.String" value="Atualizar"/>
+                        <Property name="text" type="java.lang.String" value="Editar"/>
                       </Properties>
                       <Events>
-                        <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnAtualizaForneMousePressed"/>
+                        <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnEditarFornMousePressed"/>
                       </Events>
                     </Component>
                     <Container class="javax.swing.JScrollPane" name="scrlTabFornecedores">
