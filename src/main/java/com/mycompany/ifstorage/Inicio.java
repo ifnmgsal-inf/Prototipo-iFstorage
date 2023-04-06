@@ -93,8 +93,6 @@ public class Inicio extends javax.swing.JFrame {
         lblLogo = new javax.swing.JLabel();
         lblTextLogo = new javax.swing.JLabel();
         lblVersion = new javax.swing.JLabel();
-        pnlMenu = new javax.swing.JPanel();
-        lblMenu = new javax.swing.JLabel();
         pnlDados = new javax.swing.JPanel();
         lblDados = new javax.swing.JLabel();
         pnlCardapio = new javax.swing.JPanel();
@@ -224,7 +222,6 @@ public class Inicio extends javax.swing.JFrame {
         pnlActions.setOpaque(false);
 
         lblMin.setBackground(new java.awt.Color(23, 136, 44));
-        lblMin.setIcon(new javax.swing.ImageIcon("D:\\CursoJava\\Prototipo-iFstorage\\src\\main\\java\\com\\mycompany\\ifstorage\\images\\mim.png")); // NOI18N
         lblMin.setLabelFor(lblMin);
         lblMin.setOpaque(true);
         lblMin.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -250,7 +247,6 @@ public class Inicio extends javax.swing.JFrame {
         });
 
         lblMax.setBackground(new java.awt.Color(23, 136, 44));
-        lblMax.setIcon(new javax.swing.ImageIcon("D:\\CursoJava\\Prototipo-iFstorage\\src\\main\\java\\com\\mycompany\\ifstorage\\images\\max.png")); // NOI18N
         lblMax.setLabelFor(lblMax);
         lblMax.setOpaque(true);
         lblMax.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -275,7 +271,6 @@ public class Inicio extends javax.swing.JFrame {
         });
 
         lblExit.setBackground(new java.awt.Color(23, 136, 44));
-        lblExit.setIcon(new javax.swing.ImageIcon("D:\\CursoJava\\Prototipo-iFstorage\\src\\main\\java\\com\\mycompany\\ifstorage\\images\\exit.png")); // NOI18N
         lblExit.setLabelFor(lblExit);
         lblExit.setOpaque(true);
         lblExit.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -333,8 +328,6 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
 
-        lblLogo.setIcon(new javax.swing.ImageIcon("D:\\CursoJava\\Prototipo-iFstorage\\src\\main\\java\\com\\mycompany\\ifstorage\\images\\logo.png")); // NOI18N
-
         lblTextLogo.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         lblTextLogo.setForeground(new java.awt.Color(255, 255, 255));
         lblTextLogo.setText("iFstorage");
@@ -342,33 +335,6 @@ public class Inicio extends javax.swing.JFrame {
         lblVersion.setFont(new java.awt.Font("Century Gothic", 0, 10)); // NOI18N
         lblVersion.setForeground(new java.awt.Color(204, 204, 204));
         lblVersion.setText("V0,01");
-
-        pnlMenu.setBackground(new java.awt.Color(23, 136, 44));
-        pnlMenu.setForeground(new java.awt.Color(255, 255, 255));
-        pnlMenu.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                pnlMenuMousePressed(evt);
-            }
-        });
-
-        lblMenu.setBackground(new java.awt.Color(0, 0, 0));
-        lblMenu.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        lblMenu.setForeground(new java.awt.Color(255, 255, 255));
-        lblMenu.setText("Menu");
-
-        javax.swing.GroupLayout pnlMenuLayout = new javax.swing.GroupLayout(pnlMenu);
-        pnlMenu.setLayout(pnlMenuLayout);
-        pnlMenuLayout.setHorizontalGroup(
-            pnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlMenuLayout.createSequentialGroup()
-                .addGap(33, 33, 33)
-                .addComponent(lblMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        pnlMenuLayout.setVerticalGroup(
-            pnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblMenu, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
 
         pnlDados.setBackground(new java.awt.Color(23, 136, 44));
         pnlDados.setForeground(new java.awt.Color(255, 255, 255));
@@ -461,7 +427,6 @@ public class Inicio extends javax.swing.JFrame {
             pnlBarraLeteralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(pnlCardapio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(pnlDados, javax.swing.GroupLayout.DEFAULT_SIZE, 220, Short.MAX_VALUE)
-            .addComponent(pnlMenu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(pnlRelatorio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlBarraLeteralLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -486,40 +451,15 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(lblVersion)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblTextLogo)
-                .addGap(67, 67, 67)
-                .addComponent(pnlMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(123, 123, 123)
                 .addComponent(pnlDados, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnlCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnlRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(304, Short.MAX_VALUE))
+                .addContainerGap(322, Short.MAX_VALUE))
         );
 
-        //Definindo coloração
-        pnlMenu.setBackground(new java.awt.Color(23, 136, 44));
-        pnlMenu.setForeground(new java.awt.Color(255, 255, 255));
-
-        // Adicionar o MouseListener ao JPanel pnlMenu
-        pnlMenu.addMouseListener(new MouseAdapter() {
-            private Color originalColor = pnlMenu.getBackground();
-            private Color hoverColor = new Color(20, 122, 40); // Definir a nova cor de fundo ao passar o mouse
-
-            @Override
-            public void mouseEntered(MouseEvent e) {
-                if(!pnlMenu.getBackground().equals(new Color(54, 176, 160))){
-                    pnlMenu.setBackground(hoverColor);
-                }
-            }
-
-            @Override
-            public void mouseExited(MouseEvent e) {
-                if(!pnlMenu.getBackground().equals(new Color(54, 176, 160))){
-                    pnlMenu.setBackground(originalColor);
-                }
-            }
-        });
         //Definindo coloração
         pnlDados.setBackground(new java.awt.Color(23, 136, 44));
         pnlDados.setForeground(new java.awt.Color(255, 255, 255));
@@ -595,8 +535,6 @@ public class Inicio extends javax.swing.JFrame {
         pnlFundo.add(pnlBarraLeteral, java.awt.BorderLayout.LINE_START);
 
         pnlContent.setLayout(new java.awt.CardLayout());
-
-        lblBackgroundImage.setIcon(new javax.swing.ImageIcon("D:\\CursoJava\\Prototipo-iFstorage\\src\\main\\java\\com\\mycompany\\ifstorage\\images\\logo_fundo.png")); // NOI18N
 
         lblTextLogo_fundo.setFont(new java.awt.Font("Segoe UI", 1, 60)); // NOI18N
         lblTextLogo_fundo.setForeground(new java.awt.Color(154, 176, 160));
@@ -1396,7 +1334,6 @@ public class Inicio extends javax.swing.JFrame {
         // TODO add your handling code here:
 
         setColor(pnlDados);
-        resetColor(pnlMenu);
         resetColor(pnlCardapio);
         resetColor(pnlRelatorio);
 
@@ -1416,21 +1353,9 @@ public class Inicio extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_pnlBarraLeteralMouseDragged
 
-    private void pnlMenuMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlMenuMousePressed
-        // TODO add your handling code here:
-
-        resetColor(pnlDados);
-        setColor(pnlMenu);
-        resetColor(pnlCardapio);
-        resetColor(pnlRelatorio);
-
-        cardLayout_options.show(pnlContent, "card1");
-    }//GEN-LAST:event_pnlMenuMousePressed
-
     private void pnlCardapioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCardapioMousePressed
         setColor(pnlCardapio);
         resetColor(pnlDados);
-        resetColor(pnlMenu);
         resetColor(pnlRelatorio);
 
         cardLayout_options.show(pnlContent, "cardCardapioOpt");
@@ -1448,7 +1373,6 @@ public class Inicio extends javax.swing.JFrame {
     private void pnlRelatorioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlRelatorioMousePressed
         resetColor(pnlCardapio);
         resetColor(pnlDados);
-        resetColor(pnlMenu);
         setColor(pnlRelatorio);
 
         cardLayout_options.show(pnlContent, "card4");
@@ -1625,7 +1549,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JButton lblInfoAboutProd;
     private javax.swing.JLabel lblLogo;
     private javax.swing.JLabel lblMax;
-    private javax.swing.JLabel lblMenu;
     private javax.swing.JLabel lblMin;
     private javax.swing.JLabel lblProdutosTitle;
     private javax.swing.JLabel lblRelatorio;
@@ -1649,7 +1572,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JPanel pnlFornecedoresInfo;
     private javax.swing.JPanel pnlFundo;
     private javax.swing.JPanel pnlInfoAbout;
-    private javax.swing.JPanel pnlMenu;
     private javax.swing.JPanel pnlOptionsInfo;
     private javax.swing.JPanel pnlProdutosInfo;
     private javax.swing.JPanel pnlRelatorio;
