@@ -845,33 +845,35 @@ public class Inicio extends javax.swing.JFrame {
         tblFornecedores.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         tblFornecedores.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {"Carlos Eduardo", "14961988/855-0001"},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+                {"1", "Carlos Eduardo", "1234567891/0001"},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
             },
             new String [] {
-                "Nome", "CNPJ"
+                "Código", "Nome", "CNPJ"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.Object.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -892,13 +894,13 @@ public class Inicio extends javax.swing.JFrame {
                     .addComponent(scrlTabFornecedores)
                     .addGroup(pnlFornecedoresInfoLayout.createSequentialGroup()
                         .addComponent(btnEditarForn, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
+                        .addGap(60, 60, 60)
                         .addComponent(btnAdicionaForne, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                         .addComponent(btnPesquisaForne, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
+                        .addGap(60, 60, 60)
                         .addComponent(btnDeleteItemForne, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(115, Short.MAX_VALUE))))
+                        .addContainerGap())))
         );
         pnlFornecedoresInfoLayout.setVerticalGroup(
             pnlFornecedoresInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -911,7 +913,7 @@ public class Inicio extends javax.swing.JFrame {
                     .addComponent(btnPesquisaForne)
                     .addComponent(btnDeleteItemForne))
                 .addGap(18, 18, 18)
-                .addComponent(scrlTabFornecedores, javax.swing.GroupLayout.DEFAULT_SIZE, 682, Short.MAX_VALUE))
+                .addComponent(scrlTabFornecedores, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE))
         );
 
         pnlAboutInfo.add(pnlFornecedoresInfo, "DadosCard2");

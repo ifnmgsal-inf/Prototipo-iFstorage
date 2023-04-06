@@ -831,13 +831,13 @@
                                   <Component id="scrlTabFornecedores" max="32767" attributes="0"/>
                                   <Group type="102" attributes="0">
                                       <Component id="btnEditarForn" min="-2" pref="254" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                                       <Component id="btnAdicionaForne" min="-2" pref="254" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
+                                      <EmptySpace pref="59" max="32767" attributes="0"/>
                                       <Component id="btnPesquisaForne" min="-2" pref="254" max="-2" attributes="0"/>
-                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                                       <Component id="btnDeleteItemForne" min="-2" pref="254" max="-2" attributes="0"/>
-                                      <EmptySpace pref="115" max="32767" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -855,7 +855,7 @@
                                   <Component id="btnDeleteItemForne" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="scrlTabFornecedores" pref="682" max="32767" attributes="0"/>
+                              <Component id="scrlTabFornecedores" pref="700" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -964,7 +964,31 @@
                               <Font name="Segoe UI" size="16" style="0"/>
                             </Property>
                             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                              <Table columnCount="2" rowCount="20">
+                              <Table columnCount="3" rowCount="22">
+                                <Column editable="true" title="C&#xf3;digo" type="java.lang.String">
+                                  <Data value="1"/>
+                                  <Data value="null"/>
+                                  <Data value="null"/>
+                                  <Data value="null"/>
+                                  <Data value="null"/>
+                                  <Data value="null"/>
+                                  <Data value="null"/>
+                                  <Data value="null"/>
+                                  <Data value="null"/>
+                                  <Data value="null"/>
+                                  <Data value="null"/>
+                                  <Data value="null"/>
+                                  <Data value="null"/>
+                                  <Data value="null"/>
+                                  <Data value="null"/>
+                                  <Data value="null"/>
+                                  <Data value="null"/>
+                                  <Data value="null"/>
+                                  <Data value="null"/>
+                                  <Data value="null"/>
+                                  <Data value="null"/>
+                                  <Data value="null"/>
+                                </Column>
                                 <Column editable="true" title="Nome" type="java.lang.String">
                                   <Data value="Carlos Eduardo"/>
                                   <Data value="null"/>
@@ -986,9 +1010,13 @@
                                   <Data value="null"/>
                                   <Data value="null"/>
                                   <Data value="null"/>
+                                  <Data value="null"/>
+                                  <Data value="null"/>
                                 </Column>
-                                <Column editable="true" title="CNPJ" type="java.lang.Object">
-                                  <Data value="14961988/855-0001"/>
+                                <Column editable="true" title="CNPJ" type="java.lang.String">
+                                  <Data value="1234567891/0001"/>
+                                  <Data value="null"/>
+                                  <Data value="null"/>
                                   <Data value="null"/>
                                   <Data value="null"/>
                                   <Data value="null"/>
@@ -1013,6 +1041,11 @@
                             </Property>
                             <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                               <TableColumnModel selectionModel="0">
+                                <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                                  <Title/>
+                                  <Editor/>
+                                  <Renderer/>
+                                </Column>
                                 <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                                   <Title/>
                                   <Editor/>
