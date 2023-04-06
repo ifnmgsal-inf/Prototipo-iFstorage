@@ -1,11 +1,14 @@
 package com.mycompany.ifstorage;
 import java.awt.CardLayout;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Frame;
 import static java.awt.Frame.MAXIMIZED_BOTH;
+import java.awt.Toolkit;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
+import javax.swing.BorderFactory;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
@@ -221,6 +224,7 @@ public class Inicio extends javax.swing.JFrame {
         pnlActions.setOpaque(false);
 
         lblMin.setBackground(new java.awt.Color(23, 136, 44));
+        lblMin.setIcon(new javax.swing.ImageIcon("D:\\CursoJava\\Prototipo-iFstorage\\src\\main\\java\\com\\mycompany\\ifstorage\\images\\mim.png")); // NOI18N
         lblMin.setLabelFor(lblMin);
         lblMin.setOpaque(true);
         lblMin.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -246,6 +250,7 @@ public class Inicio extends javax.swing.JFrame {
         });
 
         lblMax.setBackground(new java.awt.Color(23, 136, 44));
+        lblMax.setIcon(new javax.swing.ImageIcon("D:\\CursoJava\\Prototipo-iFstorage\\src\\main\\java\\com\\mycompany\\ifstorage\\images\\max.png")); // NOI18N
         lblMax.setLabelFor(lblMax);
         lblMax.setOpaque(true);
         lblMax.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -270,6 +275,7 @@ public class Inicio extends javax.swing.JFrame {
         });
 
         lblExit.setBackground(new java.awt.Color(23, 136, 44));
+        lblExit.setIcon(new javax.swing.ImageIcon("D:\\CursoJava\\Prototipo-iFstorage\\src\\main\\java\\com\\mycompany\\ifstorage\\images\\exit.png")); // NOI18N
         lblExit.setLabelFor(lblExit);
         lblExit.setOpaque(true);
         lblExit.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -326,6 +332,8 @@ public class Inicio extends javax.swing.JFrame {
                 pnlBarraLeteralMousePressed(evt);
             }
         });
+
+        lblLogo.setIcon(new javax.swing.ImageIcon("D:\\CursoJava\\Prototipo-iFstorage\\src\\main\\java\\com\\mycompany\\ifstorage\\images\\logo.png")); // NOI18N
 
         lblTextLogo.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         lblTextLogo.setForeground(new java.awt.Color(255, 255, 255));
@@ -486,7 +494,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(pnlCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnlRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(322, Short.MAX_VALUE))
+                .addContainerGap(304, Short.MAX_VALUE))
         );
 
         //Definindo coloração
@@ -588,6 +596,8 @@ public class Inicio extends javax.swing.JFrame {
 
         pnlContent.setLayout(new java.awt.CardLayout());
 
+        lblBackgroundImage.setIcon(new javax.swing.ImageIcon("D:\\CursoJava\\Prototipo-iFstorage\\src\\main\\java\\com\\mycompany\\ifstorage\\images\\logo_fundo.png")); // NOI18N
+
         lblTextLogo_fundo.setFont(new java.awt.Font("Segoe UI", 1, 60)); // NOI18N
         lblTextLogo_fundo.setForeground(new java.awt.Color(154, 176, 160));
         lblTextLogo_fundo.setText("iFstorage");
@@ -597,7 +607,7 @@ public class Inicio extends javax.swing.JFrame {
         pnlDefaultScreenLayout.setHorizontalGroup(
             pnlDefaultScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlDefaultScreenLayout.createSequentialGroup()
-                .addContainerGap(496, Short.MAX_VALUE)
+                .addContainerGap(477, Short.MAX_VALUE)
                 .addGroup(pnlDefaultScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlDefaultScreenLayout.createSequentialGroup()
                         .addComponent(lblBackgroundImage)
@@ -613,7 +623,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(lblBackgroundImage)
                 .addGap(18, 18, 18)
                 .addComponent(lblTextLogo_fundo, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(603, Short.MAX_VALUE))
+                .addContainerGap(265, Short.MAX_VALUE))
         );
 
         pnlContent.add(pnlDefaultScreen, "card1");
@@ -663,7 +673,7 @@ public class Inicio extends javax.swing.JFrame {
         pnlOptionsInfoLayout.setVerticalGroup(
             pnlOptionsInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlOptionsInfoLayout.createSequentialGroup()
-                .addContainerGap(325, Short.MAX_VALUE)
+                .addContainerGap(307, Short.MAX_VALUE)
                 .addComponent(lblInfoAbout1)
                 .addGap(75, 75, 75)
                 .addGroup(pnlOptionsInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -825,7 +835,7 @@ public class Inicio extends javax.swing.JFrame {
                     .addComponent(btnPesquisaProd)
                     .addComponent(btnDeleteItemProd))
                 .addGap(18, 18, 18)
-                .addComponent(scrlTabProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE))
+                .addComponent(scrlTabProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, 682, Short.MAX_VALUE))
         );
 
         pnlAboutInfo.add(pnlProdutosInfo, "DadosCard3");
@@ -841,6 +851,11 @@ public class Inicio extends javax.swing.JFrame {
         btnDeleteItemForne.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnDeleteItemForne.setForeground(new java.awt.Color(255, 255, 255));
         btnDeleteItemForne.setText("Deletar");
+        btnDeleteItemForne.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnDeleteItemForneMousePressed(evt);
+            }
+        });
         btnDeleteItemForne.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteItemForneActionPerformed(evt);
@@ -851,6 +866,11 @@ public class Inicio extends javax.swing.JFrame {
         btnPesquisaForne.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnPesquisaForne.setForeground(new java.awt.Color(255, 255, 255));
         btnPesquisaForne.setText("Pesquisar");
+        btnPesquisaForne.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnPesquisaForneMousePressed(evt);
+            }
+        });
         btnPesquisaForne.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnPesquisaForneActionPerformed(evt);
@@ -861,6 +881,11 @@ public class Inicio extends javax.swing.JFrame {
         btnAdicionaForne.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnAdicionaForne.setForeground(new java.awt.Color(255, 255, 255));
         btnAdicionaForne.setText("Adicionar");
+        btnAdicionaForne.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnAdicionaForneMousePressed(evt);
+            }
+        });
         btnAdicionaForne.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAdicionaForneActionPerformed(evt);
@@ -871,6 +896,11 @@ public class Inicio extends javax.swing.JFrame {
         btnAtualizaForne.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnAtualizaForne.setForeground(new java.awt.Color(255, 255, 255));
         btnAtualizaForne.setText("Atualizar");
+        btnAtualizaForne.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnAtualizaForneMousePressed(evt);
+            }
+        });
 
         scrlTabFornecedores.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
 
@@ -943,7 +973,7 @@ public class Inicio extends javax.swing.JFrame {
                     .addComponent(btnPesquisaForne)
                     .addComponent(btnDeleteItemForne))
                 .addGap(18, 18, 18)
-                .addComponent(scrlTabFornecedores, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE))
+                .addComponent(scrlTabFornecedores, javax.swing.GroupLayout.DEFAULT_SIZE, 682, Short.MAX_VALUE))
         );
 
         pnlAboutInfo.add(pnlFornecedoresInfo, "DadosCard2");
@@ -1000,7 +1030,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addGroup(pnlCardapioInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCriarCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnVerCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(373, Short.MAX_VALUE))
+                .addContainerGap(355, Short.MAX_VALUE))
         );
 
         pnlCardapioOpt.add(pnlCardapioInfo, "cardCardapioInfo");
@@ -1177,7 +1207,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(btnEscolhaQuinta, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addComponent(btnEscolhaSexta, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(198, Short.MAX_VALUE))
+                .addContainerGap(180, Short.MAX_VALUE))
         );
 
         pnlCardapioOpt.add(pnlEscolhaDia, "cardEscolhaDia");
@@ -1241,7 +1271,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(lblCardapioSegunda)
                 .addGap(65, 65, 65)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(404, Short.MAX_VALUE))
+                .addContainerGap(386, Short.MAX_VALUE))
         );
 
         pnlCardapioOpt.add(pnlCardapioSegunda, "card5");
@@ -1331,7 +1361,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addGroup(pnlReportOptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnReportOpt3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnReportOpt6, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(255, Short.MAX_VALUE))
+                .addContainerGap(237, Short.MAX_VALUE))
         );
 
         pnlContent.add(pnlReportOpt, "card4");
@@ -1483,6 +1513,63 @@ public class Inicio extends javax.swing.JFrame {
     private void btnDeletarCardapioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeletarCardapioActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnDeletarCardapioActionPerformed
+
+     //Definindo ações para os botões da tabela de forncedores
+    private void btnAdicionaForneMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdicionaForneMousePressed
+        // TODO add your handling code here:
+        InFornecedor forn = new InFornecedor();
+        
+                
+        forn.setVisible(true);
+        forn.setSize(457, 400);
+        forn.setLocationRelativeTo(null); // Centraliza o JFrame na tela
+        forn.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        forn.setAlwaysOnTop(true);
+        
+        JPanel contentPane = (JPanel) forn.getContentPane();
+        contentPane.setBorder(BorderFactory.createLineBorder(Color.black));
+    }//GEN-LAST:event_btnAdicionaForneMousePressed
+
+    private void btnPesquisaForneMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPesquisaForneMousePressed
+        PesqFornecedor pesq = new PesqFornecedor();
+        
+        pesq.setVisible(true);
+        pesq.setSize(457, 400);
+        pesq.setLocationRelativeTo(null); // Centraliza o JFrame na tela
+        pesq.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        pesq.setAlwaysOnTop(true);
+        
+        JPanel contentPane = (JPanel) pesq.getContentPane();
+        contentPane.setBorder(BorderFactory.createLineBorder(Color.black));
+    }//GEN-LAST:event_btnPesquisaForneMousePressed
+
+    private void btnDeleteItemForneMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDeleteItemForneMousePressed
+        Exclusao excl = new Exclusao();
+        
+        excl.setVisible(true);
+        excl.setSize(457, 400);
+        excl.setLocationRelativeTo(null); // Centraliza o JFrame na tela
+        excl.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        excl.setAlwaysOnTop(true);
+        
+        JPanel contentPane = (JPanel) excl.getContentPane();
+        contentPane.setBorder(BorderFactory.createLineBorder(Color.black));
+    }//GEN-LAST:event_btnDeleteItemForneMousePressed
+
+    private void btnAtualizaForneMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAtualizaForneMousePressed
+        // TODO add your handling code here:
+        InFornecedor forn = new InFornecedor();
+        
+                
+        forn.setVisible(true);
+        forn.setSize(457, 400);
+        forn.setLocationRelativeTo(null); // Centraliza o JFrame na tela
+        forn.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        forn.setAlwaysOnTop(true);
+        
+        JPanel contentPane = (JPanel) forn.getContentPane();
+        contentPane.setBorder(BorderFactory.createLineBorder(Color.black));
+    }//GEN-LAST:event_btnAtualizaForneMousePressed
 
     
     public static void main(String args[]) {

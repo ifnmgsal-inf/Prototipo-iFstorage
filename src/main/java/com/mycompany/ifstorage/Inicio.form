@@ -163,6 +163,9 @@
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="2c" green="88" red="17" type="rgb"/>
                 </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="D:\CursoJava\Prototipo-iFstorage\src\main\java\com\mycompany\ifstorage\images\mim.png"/>
+                </Property>
                 <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="lblMin"/>
                 </Property>
@@ -180,6 +183,9 @@
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="2c" green="88" red="17" type="rgb"/>
                 </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="D:\CursoJava\Prototipo-iFstorage\src\main\java\com\mycompany\ifstorage\images\max.png"/>
+                </Property>
                 <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="lblMax"/>
                 </Property>
@@ -196,6 +202,9 @@
               <Properties>
                 <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="2c" green="88" red="17" type="rgb"/>
+                </Property>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="D:\CursoJava\Prototipo-iFstorage\src\main\java\com\mycompany\ifstorage\images\exit.png"/>
                 </Property>
                 <Property name="labelFor" type="java.awt.Component" editor="org.netbeans.modules.form.ComponentChooserEditor">
                   <ComponentRef name="lblExit"/>
@@ -293,13 +302,18 @@
                       <Component id="pnlCardapio" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="pnlRelatorio" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="322" max="32767" attributes="0"/>
+                      <EmptySpace pref="304" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
             <Component class="javax.swing.JLabel" name="lblLogo">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="D:\CursoJava\Prototipo-iFstorage\src\main\java\com\mycompany\ifstorage\images\logo.png"/>
+                </Property>
+              </Properties>
             </Component>
             <Component class="javax.swing.JLabel" name="lblTextLogo">
               <Properties>
@@ -545,7 +559,7 @@
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
-                          <EmptySpace pref="496" max="32767" attributes="0"/>
+                          <EmptySpace pref="477" max="32767" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="1" attributes="0">
                                   <Component id="lblBackgroundImage" min="-2" max="-2" attributes="0"/>
@@ -566,13 +580,18 @@
                           <Component id="lblBackgroundImage" min="-2" max="-2" attributes="0"/>
                           <EmptySpace type="separate" max="-2" attributes="0"/>
                           <Component id="lblTextLogo_fundo" min="-2" pref="95" max="-2" attributes="0"/>
-                          <EmptySpace pref="603" max="32767" attributes="0"/>
+                          <EmptySpace pref="265" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="lblBackgroundImage">
+                  <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="2" name="D:\CursoJava\Prototipo-iFstorage\src\main\java\com\mycompany\ifstorage\images\logo_fundo.png"/>
+                    </Property>
+                  </Properties>
                 </Component>
                 <Component class="javax.swing.JLabel" name="lblTextLogo_fundo">
                   <Properties>
@@ -626,7 +645,7 @@
                     <DimensionLayout dim="1">
                       <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace pref="325" max="32767" attributes="0"/>
+                              <EmptySpace pref="307" max="32767" attributes="0"/>
                               <Component id="lblInfoAbout1" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="3" attributes="0">
@@ -725,7 +744,7 @@
                                   <Component id="btnDeleteItemProd" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                              <Component id="scrlTabProdutos" pref="700" max="32767" attributes="0"/>
+                              <Component id="scrlTabProdutos" pref="682" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -901,7 +920,7 @@
                                   <Component id="btnDeleteItemForne" alignment="3" min="-2" max="-2" attributes="0"/>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="scrlTabFornecedores" pref="700" max="32767" attributes="0"/>
+                              <Component id="scrlTabFornecedores" pref="682" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -937,6 +956,7 @@
                         <Property name="text" type="java.lang.String" value="Deletar"/>
                       </Properties>
                       <Events>
+                        <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnDeleteItemForneMousePressed"/>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnDeleteItemForneActionPerformed"/>
                       </Events>
                     </Component>
@@ -954,6 +974,7 @@
                         <Property name="text" type="java.lang.String" value="Pesquisar"/>
                       </Properties>
                       <Events>
+                        <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnPesquisaForneMousePressed"/>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPesquisaForneActionPerformed"/>
                       </Events>
                     </Component>
@@ -971,6 +992,7 @@
                         <Property name="text" type="java.lang.String" value="Adicionar"/>
                       </Properties>
                       <Events>
+                        <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnAdicionaForneMousePressed"/>
                         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnAdicionaForneActionPerformed"/>
                       </Events>
                     </Component>
@@ -987,6 +1009,9 @@
                         </Property>
                         <Property name="text" type="java.lang.String" value="Atualizar"/>
                       </Properties>
+                      <Events>
+                        <EventHandler event="mousePressed" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnAtualizaForneMousePressed"/>
+                      </Events>
                     </Component>
                     <Container class="javax.swing.JScrollPane" name="scrlTabFornecedores">
                       <Properties>
@@ -1120,7 +1145,7 @@
                                   <Component id="btnCriarCardapio" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
                                   <Component id="btnVerCardapio" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
                               </Group>
-                              <EmptySpace pref="373" max="32767" attributes="0"/>
+                              <EmptySpace pref="355" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1382,7 +1407,7 @@
                               <Component id="btnEscolhaQuinta" min="-2" pref="55" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                               <Component id="btnEscolhaSexta" min="-2" pref="55" max="-2" attributes="0"/>
-                              <EmptySpace pref="198" max="32767" attributes="0"/>
+                              <EmptySpace pref="180" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1515,7 +1540,7 @@
                               <Component id="lblCardapioSegunda" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="65" max="-2" attributes="0"/>
                               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace pref="404" max="32767" attributes="0"/>
+                              <EmptySpace pref="386" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -1689,7 +1714,7 @@
                               <Component id="btnReportOpt3" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
                               <Component id="btnReportOpt6" alignment="3" min="-2" pref="55" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="255" max="32767" attributes="0"/>
+                          <EmptySpace pref="237" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
