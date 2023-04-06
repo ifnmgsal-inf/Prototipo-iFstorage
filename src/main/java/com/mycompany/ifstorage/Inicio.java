@@ -457,7 +457,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(pnlCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnlRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(322, Short.MAX_VALUE))
+                .addContainerGap(324, Short.MAX_VALUE))
         );
 
         //Definindo coloração
@@ -545,7 +545,7 @@ public class Inicio extends javax.swing.JFrame {
         pnlDefaultScreenLayout.setHorizontalGroup(
             pnlDefaultScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlDefaultScreenLayout.createSequentialGroup()
-                .addContainerGap(477, Short.MAX_VALUE)
+                .addContainerGap(500, Short.MAX_VALUE)
                 .addGroup(pnlDefaultScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlDefaultScreenLayout.createSequentialGroup()
                         .addComponent(lblBackgroundImage)
@@ -561,7 +561,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(lblBackgroundImage)
                 .addGap(18, 18, 18)
                 .addComponent(lblTextLogo_fundo, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(265, Short.MAX_VALUE))
+                .addContainerGap(605, Short.MAX_VALUE))
         );
 
         pnlContent.add(pnlDefaultScreen, "card1");
@@ -570,7 +570,7 @@ public class Inicio extends javax.swing.JFrame {
 
         lblInfoAbout1.setFont(new java.awt.Font("Segoe UI", 0, 60)); // NOI18N
         lblInfoAbout1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblInfoAbout1.setText("Deseja ver informações sobre:");
+        lblInfoAbout1.setText("Deseja ver informações sobre");
 
         btnInfoAboutFornecedores.setBackground(new java.awt.Color(23, 136, 44));
         btnInfoAboutFornecedores.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -579,6 +579,11 @@ public class Inicio extends javax.swing.JFrame {
         btnInfoAboutFornecedores.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 btnInfoAboutFornecedoresMousePressed(evt);
+            }
+        });
+        btnInfoAboutFornecedores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInfoAboutFornecedoresActionPerformed(evt);
             }
         });
 
@@ -599,19 +604,19 @@ public class Inicio extends javax.swing.JFrame {
             .addGroup(pnlOptionsInfoLayout.createSequentialGroup()
                 .addGroup(pnlOptionsInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlOptionsInfoLayout.createSequentialGroup()
-                        .addGap(315, 315, 315)
+                        .addGap(364, 364, 364)
                         .addComponent(btnInfoAboutFornecedores, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(100, 100, 100)
+                        .addGap(81, 81, 81)
                         .addComponent(btnInfoAboutProd, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(pnlOptionsInfoLayout.createSequentialGroup()
-                        .addGap(150, 150, 150)
+                        .addGap(196, 196, 196)
                         .addComponent(lblInfoAbout1, javax.swing.GroupLayout.PREFERRED_SIZE, 814, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(243, Short.MAX_VALUE))
+                .addContainerGap(201, Short.MAX_VALUE))
         );
         pnlOptionsInfoLayout.setVerticalGroup(
             pnlOptionsInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlOptionsInfoLayout.createSequentialGroup()
-                .addContainerGap(307, Short.MAX_VALUE)
+                .addGap(250, 250, 250)
                 .addComponent(lblInfoAbout1)
                 .addGap(75, 75, 75)
                 .addGroup(pnlOptionsInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -756,7 +761,7 @@ public class Inicio extends javax.swing.JFrame {
                         .addComponent(btnEditarProd, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(60, 60, 60)
                         .addComponent(btnAdicionaProd, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
                         .addComponent(btnPesquisaProd, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(60, 60, 60)
                         .addComponent(btnDeleteItemProd, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -773,7 +778,7 @@ public class Inicio extends javax.swing.JFrame {
                     .addComponent(btnPesquisaProd)
                     .addComponent(btnDeleteItemProd))
                 .addGap(18, 18, 18)
-                .addComponent(scrlTabProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE))
+                .addComponent(scrlTabProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, 702, Short.MAX_VALUE))
         );
 
         pnlAboutInfo.add(pnlProdutosInfo, "DadosCard3");
@@ -896,7 +901,7 @@ public class Inicio extends javax.swing.JFrame {
                         .addComponent(btnEditarForn, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(60, 60, 60)
                         .addComponent(btnAdicionaForne, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
                         .addComponent(btnPesquisaForne, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(60, 60, 60)
                         .addComponent(btnDeleteItemForne, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -913,7 +918,7 @@ public class Inicio extends javax.swing.JFrame {
                     .addComponent(btnPesquisaForne)
                     .addComponent(btnDeleteItemForne))
                 .addGap(18, 18, 18)
-                .addComponent(scrlTabFornecedores, javax.swing.GroupLayout.DEFAULT_SIZE, 700, Short.MAX_VALUE))
+                .addComponent(scrlTabFornecedores, javax.swing.GroupLayout.DEFAULT_SIZE, 702, Short.MAX_VALUE))
         );
 
         pnlAboutInfo.add(pnlFornecedoresInfo, "DadosCard2");
@@ -926,9 +931,17 @@ public class Inicio extends javax.swing.JFrame {
         btnVerCardapio.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         btnVerCardapio.setForeground(new java.awt.Color(255, 255, 255));
         btnVerCardapio.setText("Ver Cardápio");
+        btnVerCardapio.setMaximumSize(new java.awt.Dimension(175, 39));
+        btnVerCardapio.setMinimumSize(new java.awt.Dimension(175, 39));
+        btnVerCardapio.setPreferredSize(new java.awt.Dimension(175, 39));
         btnVerCardapio.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 btnVerCardapioMousePressed(evt);
+            }
+        });
+        btnVerCardapio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVerCardapioActionPerformed(evt);
             }
         });
 
@@ -952,25 +965,24 @@ public class Inicio extends javax.swing.JFrame {
             pnlCardapioInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlCardapioInfoLayout.createSequentialGroup()
                 .addGap(364, 364, 364)
-                .addComponent(btnVerCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(71, 71, 71)
-                .addComponent(btnCriarCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(370, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCardapioInfoLayout.createSequentialGroup()
+                .addComponent(btnVerCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(81, 81, 81)
+                .addComponent(btnCriarCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(346, Short.MAX_VALUE))
+            .addGroup(pnlCardapioInfoLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblCardapioInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(lblCardapioInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlCardapioInfoLayout.setVerticalGroup(
             pnlCardapioInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlCardapioInfoLayout.createSequentialGroup()
                 .addGap(250, 250, 250)
                 .addComponent(lblCardapioInfo)
-                .addGap(70, 70, 70)
+                .addGap(75, 75, 75)
                 .addGroup(pnlCardapioInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCriarCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnVerCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(355, Short.MAX_VALUE))
+                .addContainerGap(370, Short.MAX_VALUE))
         );
 
         pnlCardapioOpt.add(pnlCardapioInfo, "cardCardapioInfo");
@@ -1047,7 +1059,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(btnEditarCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(98, 98, 98)
                 .addComponent(btnDeletarCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(129, Short.MAX_VALUE))
+                .addContainerGap(133, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlVerCardapioLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(scrlTabCardapio)
@@ -1147,7 +1159,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(btnEscolhaQuinta, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addComponent(btnEscolhaSexta, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(180, Short.MAX_VALUE))
+                .addContainerGap(200, Short.MAX_VALUE))
         );
 
         pnlCardapioOpt.add(pnlEscolhaDia, "cardEscolhaDia");
@@ -1199,7 +1211,7 @@ public class Inicio extends javax.swing.JFrame {
         pnlCardapioSegunda.setLayout(pnlCardapioSegundaLayout);
         pnlCardapioSegundaLayout.setHorizontalGroup(
             pnlCardapioSegundaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblCardapioSegunda, javax.swing.GroupLayout.DEFAULT_SIZE, 1207, Short.MAX_VALUE)
+            .addComponent(lblCardapioSegunda, javax.swing.GroupLayout.DEFAULT_SIZE, 1211, Short.MAX_VALUE)
             .addGroup(pnlCardapioSegundaLayout.createSequentialGroup()
                 .addGap(155, 155, 155)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1211,7 +1223,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(lblCardapioSegunda)
                 .addGap(65, 65, 65)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(386, Short.MAX_VALUE))
+                .addContainerGap(406, Short.MAX_VALUE))
         );
 
         pnlCardapioOpt.add(pnlCardapioSegunda, "card5");
@@ -1220,7 +1232,7 @@ public class Inicio extends javax.swing.JFrame {
 
         lblReportOpt.setFont(new java.awt.Font("Segoe UI", 0, 60)); // NOI18N
         lblReportOpt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblReportOpt.setText("Deseja gerar relatórios sobre:");
+        lblReportOpt.setText("Deseja gerar relatórios sobre");
 
         btnReportOpt1.setBackground(new java.awt.Color(23, 136, 44));
         btnReportOpt1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -1262,32 +1274,23 @@ public class Inicio extends javax.swing.JFrame {
         pnlReportOptLayout.setHorizontalGroup(
             pnlReportOptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlReportOptLayout.createSequentialGroup()
+                .addGap(229, 229, 229)
+                .addGroup(pnlReportOptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnReportOpt1, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnReportOpt2, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnReportOpt3, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(99, 99, 99)
                 .addGroup(pnlReportOptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlReportOptLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(lblReportOpt, javax.swing.GroupLayout.DEFAULT_SIZE, 1195, Short.MAX_VALUE))
-                    .addGroup(pnlReportOptLayout.createSequentialGroup()
-                        .addGroup(pnlReportOptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(pnlReportOptLayout.createSequentialGroup()
-                                .addGap(202, 202, 202)
-                                .addGroup(pnlReportOptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(btnReportOpt2, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(btnReportOpt1, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(pnlReportOptLayout.createSequentialGroup()
-                                .addGap(203, 203, 203)
-                                .addComponent(btnReportOpt3, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(88, 88, 88)
-                        .addGroup(pnlReportOptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnReportOpt4, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnReportOpt5, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(btnReportOpt6, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE)))
-                .addContainerGap())
+                    .addComponent(btnReportOpt4, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnReportOpt5, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnReportOpt6, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(229, Short.MAX_VALUE))
+            .addComponent(lblReportOpt, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         pnlReportOptLayout.setVerticalGroup(
             pnlReportOptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlReportOptLayout.createSequentialGroup()
-                .addGap(196, 196, 196)
+                .addGap(250, 250, 250)
                 .addComponent(lblReportOpt)
                 .addGap(75, 75, 75)
                 .addGroup(pnlReportOptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1301,7 +1304,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addGroup(pnlReportOptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnReportOpt3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnReportOpt6, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(237, Short.MAX_VALUE))
+                .addContainerGap(203, Short.MAX_VALUE))
         );
 
         pnlContent.add(pnlReportOpt, "card4");
@@ -1496,6 +1499,14 @@ public class Inicio extends javax.swing.JFrame {
         JPanel contentPane = (JPanel) forn.getContentPane();
         contentPane.setBorder(BorderFactory.createLineBorder(Color.black));
     }//GEN-LAST:event_btnEditarFornMousePressed
+
+    private void btnInfoAboutFornecedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoAboutFornecedoresActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnInfoAboutFornecedoresActionPerformed
+
+    private void btnVerCardapioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerCardapioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnVerCardapioActionPerformed
 
     
     public static void main(String args[]) {
