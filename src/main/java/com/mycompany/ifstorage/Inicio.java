@@ -222,6 +222,7 @@ public class Inicio extends javax.swing.JFrame {
         pnlActions.setOpaque(false);
 
         lblMin.setBackground(new java.awt.Color(23, 136, 44));
+        lblMin.setIcon(new javax.swing.ImageIcon("D:\\CursoJava\\Prototipo-iFstorage\\src\\main\\java\\com\\mycompany\\ifstorage\\images\\mim.png")); // NOI18N
         lblMin.setLabelFor(lblMin);
         lblMin.setOpaque(true);
         lblMin.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -247,6 +248,7 @@ public class Inicio extends javax.swing.JFrame {
         });
 
         lblMax.setBackground(new java.awt.Color(23, 136, 44));
+        lblMax.setIcon(new javax.swing.ImageIcon("D:\\CursoJava\\Prototipo-iFstorage\\src\\main\\java\\com\\mycompany\\ifstorage\\images\\max.png")); // NOI18N
         lblMax.setLabelFor(lblMax);
         lblMax.setOpaque(true);
         lblMax.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -271,6 +273,7 @@ public class Inicio extends javax.swing.JFrame {
         });
 
         lblExit.setBackground(new java.awt.Color(23, 136, 44));
+        lblExit.setIcon(new javax.swing.ImageIcon("D:\\CursoJava\\Prototipo-iFstorage\\src\\main\\java\\com\\mycompany\\ifstorage\\images\\exit.png")); // NOI18N
         lblExit.setLabelFor(lblExit);
         lblExit.setOpaque(true);
         lblExit.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -327,6 +330,8 @@ public class Inicio extends javax.swing.JFrame {
                 pnlBarraLeteralMousePressed(evt);
             }
         });
+
+        lblLogo.setIcon(new javax.swing.ImageIcon("D:\\CursoJava\\Prototipo-iFstorage\\src\\main\\java\\com\\mycompany\\ifstorage\\images\\logo.png")); // NOI18N
 
         lblTextLogo.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
         lblTextLogo.setForeground(new java.awt.Color(255, 255, 255));
@@ -457,7 +462,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(pnlCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnlRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(324, Short.MAX_VALUE))
+                .addContainerGap(306, Short.MAX_VALUE))
         );
 
         //Definindo coloração
@@ -536,6 +541,8 @@ public class Inicio extends javax.swing.JFrame {
 
         pnlContent.setLayout(new java.awt.CardLayout());
 
+        lblBackgroundImage.setIcon(new javax.swing.ImageIcon("D:\\CursoJava\\Prototipo-iFstorage\\src\\main\\java\\com\\mycompany\\ifstorage\\images\\logo_fundo.png")); // NOI18N
+
         lblTextLogo_fundo.setFont(new java.awt.Font("Segoe UI", 1, 60)); // NOI18N
         lblTextLogo_fundo.setForeground(new java.awt.Color(154, 176, 160));
         lblTextLogo_fundo.setText("iFstorage");
@@ -545,7 +552,7 @@ public class Inicio extends javax.swing.JFrame {
         pnlDefaultScreenLayout.setHorizontalGroup(
             pnlDefaultScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlDefaultScreenLayout.createSequentialGroup()
-                .addContainerGap(500, Short.MAX_VALUE)
+                .addContainerGap(481, Short.MAX_VALUE)
                 .addGroup(pnlDefaultScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlDefaultScreenLayout.createSequentialGroup()
                         .addComponent(lblBackgroundImage)
@@ -561,14 +568,14 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(lblBackgroundImage)
                 .addGap(18, 18, 18)
                 .addComponent(lblTextLogo_fundo, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(605, Short.MAX_VALUE))
+                .addContainerGap(267, Short.MAX_VALUE))
         );
 
         pnlContent.add(pnlDefaultScreen, "card1");
 
         pnlAboutInfo.setLayout(new java.awt.CardLayout());
 
-        lblInfoAbout1.setFont(new java.awt.Font("Segoe UI", 0, 60)); // NOI18N
+        lblInfoAbout1.setFont(new java.awt.Font("Segoe UI", 0, 54)); // NOI18N
         lblInfoAbout1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblInfoAbout1.setText("Deseja ver informações sobre");
 
@@ -602,16 +609,12 @@ public class Inicio extends javax.swing.JFrame {
         pnlOptionsInfoLayout.setHorizontalGroup(
             pnlOptionsInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlOptionsInfoLayout.createSequentialGroup()
-                .addGroup(pnlOptionsInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlOptionsInfoLayout.createSequentialGroup()
-                        .addGap(364, 364, 364)
-                        .addComponent(btnInfoAboutFornecedores, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(81, 81, 81)
-                        .addComponent(btnInfoAboutProd, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(pnlOptionsInfoLayout.createSequentialGroup()
-                        .addGap(196, 196, 196)
-                        .addComponent(lblInfoAbout1, javax.swing.GroupLayout.PREFERRED_SIZE, 814, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(201, Short.MAX_VALUE))
+                .addGap(364, 364, 364)
+                .addComponent(btnInfoAboutFornecedores, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(81, 81, 81)
+                .addComponent(btnInfoAboutProd, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(346, Short.MAX_VALUE))
+            .addComponent(lblInfoAbout1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         pnlOptionsInfoLayout.setVerticalGroup(
             pnlOptionsInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -778,7 +781,7 @@ public class Inicio extends javax.swing.JFrame {
                     .addComponent(btnPesquisaProd)
                     .addComponent(btnDeleteItemProd))
                 .addGap(18, 18, 18)
-                .addComponent(scrlTabProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, 702, Short.MAX_VALUE))
+                .addComponent(scrlTabProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, 684, Short.MAX_VALUE))
         );
 
         pnlAboutInfo.add(pnlProdutosInfo, "DadosCard3");
@@ -918,7 +921,7 @@ public class Inicio extends javax.swing.JFrame {
                     .addComponent(btnPesquisaForne)
                     .addComponent(btnDeleteItemForne))
                 .addGap(18, 18, 18)
-                .addComponent(scrlTabFornecedores, javax.swing.GroupLayout.DEFAULT_SIZE, 702, Short.MAX_VALUE))
+                .addComponent(scrlTabFornecedores, javax.swing.GroupLayout.DEFAULT_SIZE, 684, Short.MAX_VALUE))
         );
 
         pnlAboutInfo.add(pnlFornecedoresInfo, "DadosCard2");
@@ -955,7 +958,7 @@ public class Inicio extends javax.swing.JFrame {
             }
         });
 
-        lblCardapioInfo.setFont(new java.awt.Font("Segoe UI", 0, 60)); // NOI18N
+        lblCardapioInfo.setFont(new java.awt.Font("Segoe UI", 0, 54)); // NOI18N
         lblCardapioInfo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblCardapioInfo.setText("Escolha uma Opção");
 
@@ -982,7 +985,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addGroup(pnlCardapioInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCriarCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnVerCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(370, Short.MAX_VALUE))
+                .addContainerGap(360, Short.MAX_VALUE))
         );
 
         pnlCardapioOpt.add(pnlCardapioInfo, "cardCardapioInfo");
@@ -1081,7 +1084,7 @@ public class Inicio extends javax.swing.JFrame {
 
         pnlCardapioOpt.add(pnlVerCardapio, "cardVerCardapio");
 
-        lblEscolhaDia.setFont(new java.awt.Font("Segoe UI", 0, 55)); // NOI18N
+        lblEscolhaDia.setFont(new java.awt.Font("Segoe UI", 0, 54)); // NOI18N
         lblEscolhaDia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblEscolhaDia.setText("Escolha um dia da semana para criar um cardápio");
 
@@ -1159,7 +1162,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(btnEscolhaQuinta, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26)
                 .addComponent(btnEscolhaSexta, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(200, Short.MAX_VALUE))
+                .addContainerGap(183, Short.MAX_VALUE))
         );
 
         pnlCardapioOpt.add(pnlEscolhaDia, "cardEscolhaDia");
@@ -1223,14 +1226,14 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(lblCardapioSegunda)
                 .addGap(65, 65, 65)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(406, Short.MAX_VALUE))
+                .addContainerGap(388, Short.MAX_VALUE))
         );
 
         pnlCardapioOpt.add(pnlCardapioSegunda, "card5");
 
         pnlContent.add(pnlCardapioOpt, "cardCardapioOpt");
 
-        lblReportOpt.setFont(new java.awt.Font("Segoe UI", 0, 60)); // NOI18N
+        lblReportOpt.setFont(new java.awt.Font("Segoe UI", 0, 54)); // NOI18N
         lblReportOpt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblReportOpt.setText("Deseja gerar relatórios sobre");
 
@@ -1304,7 +1307,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addGroup(pnlReportOptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnReportOpt3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnReportOpt6, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(203, Short.MAX_VALUE))
+                .addContainerGap(193, Short.MAX_VALUE))
         );
 
         pnlContent.add(pnlReportOpt, "card4");
@@ -1347,15 +1350,12 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_pnlDadosMousePressed
 
     private void lblInfoAboutProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lblInfoAboutProdActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_lblInfoAboutProdActionPerformed
 
     private void pnlBarraLeteralMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlBarraLeteralMousePressed
-        // TODO add your handling code here:
     }//GEN-LAST:event_pnlBarraLeteralMousePressed
 
     private void pnlBarraLeteralMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlBarraLeteralMouseDragged
-        // TODO add your handling code here:
     }//GEN-LAST:event_pnlBarraLeteralMouseDragged
 
     private void pnlCardapioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCardapioMousePressed
@@ -1368,11 +1368,9 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_pnlCardapioMousePressed
 
     private void btnReportOpt5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReportOpt5ActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_btnReportOpt5ActionPerformed
 
     private void pnlCardapioMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlCardapioMouseExited
-        
     }//GEN-LAST:event_pnlCardapioMouseExited
 
     private void pnlRelatorioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlRelatorioMousePressed
@@ -1384,15 +1382,12 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_pnlRelatorioMousePressed
 
     private void btnDeleteItemForneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteItemForneActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_btnDeleteItemForneActionPerformed
 
     private void btnPesquisaForneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisaForneActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_btnPesquisaForneActionPerformed
 
     private void btnAdicionaForneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicionaForneActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_btnAdicionaForneActionPerformed
 
     private void btnInfoAboutFornecedoresMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInfoAboutFornecedoresMousePressed
@@ -1400,15 +1395,12 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_btnInfoAboutFornecedoresMousePressed
 
     private void btnDeleteItemProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteItemProdActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_btnDeleteItemProdActionPerformed
 
     private void btnPesquisaProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisaProdActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_btnPesquisaProdActionPerformed
 
     private void btnAdicionaProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicionaProdActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_btnAdicionaProdActionPerformed
 
     private void btnInfoAboutProdMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnInfoAboutProdMousePressed
@@ -1420,11 +1412,9 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_btnVerCardapioMousePressed
 
     private void btnEscolhaQuintaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEscolhaQuintaActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_btnEscolhaQuintaActionPerformed
 
     private void btnEscolhaSextaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEscolhaSextaActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_btnEscolhaSextaActionPerformed
 
     private void btnCriarCardapioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCriarCardapioMousePressed
@@ -1432,15 +1422,12 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCriarCardapioMousePressed
 
     private void btnPesquisarCardapioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisarCardapioActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_btnPesquisarCardapioActionPerformed
 
     private void btnEditarCardapioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarCardapioActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_btnEditarCardapioActionPerformed
 
     private void btnDeletarCardapioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeletarCardapioActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_btnDeletarCardapioActionPerformed
 
      //Definindo ações para os botões da tabela de forncedores
@@ -1501,11 +1488,9 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEditarFornMousePressed
 
     private void btnInfoAboutFornecedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInfoAboutFornecedoresActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_btnInfoAboutFornecedoresActionPerformed
 
     private void btnVerCardapioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerCardapioActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_btnVerCardapioActionPerformed
 
     
