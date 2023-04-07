@@ -95,6 +95,8 @@ public class Inicio extends javax.swing.JFrame {
         lblCardapio = new javax.swing.JLabel();
         pnlRelatorio = new javax.swing.JPanel();
         lblRelatorio = new javax.swing.JLabel();
+        pnlEstoque = new javax.swing.JPanel();
+        lblEstoque = new javax.swing.JLabel();
         pnlContent = new javax.swing.JPanel();
         pnlDefaultScreen = new javax.swing.JPanel();
         lblBackgroundImage = new javax.swing.JLabel();
@@ -128,23 +130,29 @@ public class Inicio extends javax.swing.JFrame {
         pnlVerCardapio = new javax.swing.JPanel();
         lblVerCardapio = new javax.swing.JLabel();
         scrlTabCardapio = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        btnPesquisarCardapio = new javax.swing.JButton();
-        btnEditarCardapio = new javax.swing.JButton();
-        btnDeletarCardapio = new javax.swing.JButton();
-        pnlEscolhaDia = new javax.swing.JPanel();
-        lblEscolhaDia = new javax.swing.JLabel();
-        btnEscolhaTerca = new javax.swing.JButton();
-        btnEscolhaSegunda = new javax.swing.JButton();
-        btnEscolhaQuarta = new javax.swing.JButton();
-        btnEscolhaSexta = new javax.swing.JButton();
-        btnEscolhaQuinta = new javax.swing.JButton();
-        lblDiaSemana = new javax.swing.JLabel();
-        pnlCardapioSegunda = new javax.swing.JPanel();
-        lblCardapioSegunda = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        scrlCardapioSegunda = new javax.swing.JScrollPane();
-        listaCardapioSegunda = new javax.swing.JList<>();
+        tblCardapioMes = new javax.swing.JTable();
+        lblDataCardapio = new javax.swing.JLabel();
+        lblProximoIcon = new javax.swing.JLabel();
+        lblAnteriorIcon = new javax.swing.JLabel();
+        pnlCriarCardapio = new javax.swing.JPanel();
+        lblCriaCardapioTitle = new javax.swing.JLabel();
+        lblPesqProdCardapio = new javax.swing.JLabel();
+        tfPesquisaProdutoCardapio = new javax.swing.JTextField();
+        scrlCadapioItemSelect = new javax.swing.JScrollPane();
+        tblCadapioItemSelect = new javax.swing.JTable();
+        scrlListProdutosCardapio = new javax.swing.JScrollPane();
+        tblProdutosDisponiveisCardapio = new javax.swing.JTable();
+        lblTitleDataCard = new javax.swing.JLabel();
+        tfSelectDataCardapio = new javax.swing.JTextField();
+        lblDiaSemanaCardapio = new javax.swing.JLabel();
+        btnLimparCard = new javax.swing.JButton();
+        btnSalvarCard = new javax.swing.JButton();
+        lblDescObserva = new javax.swing.JLabel();
+        scrlObsPane = new javax.swing.JScrollPane();
+        taObservações = new javax.swing.JTextArea();
+        lblDescAvisos = new javax.swing.JLabel();
+        scrlAvsPane = new javax.swing.JScrollPane();
+        taAvisos = new javax.swing.JTextArea();
         pnlReportOpt = new javax.swing.JPanel();
         lblReportOpt = new javax.swing.JLabel();
         btnReportOpt1 = new javax.swing.JButton();
@@ -153,6 +161,15 @@ public class Inicio extends javax.swing.JFrame {
         btnReportOpt4 = new javax.swing.JButton();
         btnReportOpt5 = new javax.swing.JButton();
         btnReportOpt6 = new javax.swing.JButton();
+        pnlEstoqueOptions = new javax.swing.JPanel();
+        lblProdutosTitle1 = new javax.swing.JLabel();
+        scrlProdutosEstoque = new javax.swing.JScrollPane();
+        tbProdutosEstoque = new javax.swing.JTable();
+        btnSelectOption = new javax.swing.JButton();
+        btnPesquisaProdEstoque = new javax.swing.JButton();
+        btnAdicionaProdEstoque = new javax.swing.JButton();
+        btnEditarProdEstoque = new javax.swing.JButton();
+        btnDeleteIetProdEstoque = new javax.swing.JButton();
 
         pnlInfoAbout.setBackground(new java.awt.Color(255, 255, 255));
         pnlInfoAbout.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, new java.awt.Color(204, 204, 204), null, null));
@@ -349,7 +366,7 @@ public class Inicio extends javax.swing.JFrame {
         lblDados.setBackground(new java.awt.Color(0, 0, 0));
         lblDados.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         lblDados.setForeground(new java.awt.Color(255, 255, 255));
-        lblDados.setText("Dados");
+        lblDados.setText("Inf. Empenho");
 
         javax.swing.GroupLayout pnlDadosLayout = new javax.swing.GroupLayout(pnlDados);
         pnlDados.setLayout(pnlDadosLayout);
@@ -357,7 +374,7 @@ public class Inicio extends javax.swing.JFrame {
             pnlDadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlDadosLayout.createSequentialGroup()
                 .addGap(33, 33, 33)
-                .addComponent(lblDados, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(lblDados)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlDadosLayout.setVerticalGroup(
@@ -422,6 +439,33 @@ public class Inicio extends javax.swing.JFrame {
             .addComponent(lblRelatorio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
+        pnlEstoque.setBackground(new java.awt.Color(23, 136, 44));
+        pnlEstoque.setForeground(new java.awt.Color(255, 255, 255));
+        pnlEstoque.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                pnlEstoqueMousePressed(evt);
+            }
+        });
+
+        lblEstoque.setBackground(new java.awt.Color(0, 0, 0));
+        lblEstoque.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblEstoque.setForeground(new java.awt.Color(255, 255, 255));
+        lblEstoque.setText("Estoque");
+
+        javax.swing.GroupLayout pnlEstoqueLayout = new javax.swing.GroupLayout(pnlEstoque);
+        pnlEstoque.setLayout(pnlEstoqueLayout);
+        pnlEstoqueLayout.setHorizontalGroup(
+            pnlEstoqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlEstoqueLayout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(lblEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        pnlEstoqueLayout.setVerticalGroup(
+            pnlEstoqueLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblEstoque, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        );
+
         javax.swing.GroupLayout pnlBarraLeteralLayout = new javax.swing.GroupLayout(pnlBarraLeteral);
         pnlBarraLeteral.setLayout(pnlBarraLeteralLayout);
         pnlBarraLeteralLayout.setHorizontalGroup(
@@ -442,6 +486,7 @@ public class Inicio extends javax.swing.JFrame {
                         .addGap(49, 49, 49)
                         .addComponent(lblTextLogo, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(pnlEstoque, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         pnlBarraLeteralLayout.setVerticalGroup(
             pnlBarraLeteralLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -458,7 +503,9 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(pnlCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(pnlRelatorio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(306, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(pnlEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(252, Short.MAX_VALUE))
         );
 
         //Definindo coloração
@@ -532,6 +579,30 @@ public class Inicio extends javax.swing.JFrame {
                 }
             }
         });
+        //Definindo coloração
+        pnlRelatorio.setBackground(new java.awt.Color(23, 136, 44));
+        pnlRelatorio.setForeground(new java.awt.Color(255, 255, 255));
+
+        // Adicionar o MouseListener ao JPanel pnlMenu
+        pnlEstoque.addMouseListener(new MouseAdapter() {
+            private Color originalColor = pnlEstoque.getBackground();
+            private Color hoverColor = new Color(20, 122, 40); // Definir a nova cor de fundo ao passar o mouse
+
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                if(!pnlEstoque.getBackground().equals(new Color(54, 176, 160))){
+                    pnlEstoque.setBackground(hoverColor);
+                }
+
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                if(!pnlEstoque.getBackground().equals(new Color(54, 176, 160))){
+                    pnlEstoque.setBackground(originalColor);
+                }
+            }
+        });
 
         pnlFundo.add(pnlBarraLeteral, java.awt.BorderLayout.LINE_START);
 
@@ -548,7 +619,7 @@ public class Inicio extends javax.swing.JFrame {
         pnlDefaultScreenLayout.setHorizontalGroup(
             pnlDefaultScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlDefaultScreenLayout.createSequentialGroup()
-                .addContainerGap(490, Short.MAX_VALUE)
+                .addGap(509, 509, 509)
                 .addGroup(pnlDefaultScreenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlDefaultScreenLayout.createSequentialGroup()
                         .addComponent(lblBackgroundImage)
@@ -564,7 +635,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(lblBackgroundImage)
                 .addGap(18, 18, 18)
                 .addComponent(lblTextLogo_fundo, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(267, Short.MAX_VALUE))
+                .addContainerGap(269, Short.MAX_VALUE))
         );
 
         pnlContent.add(pnlDefaultScreen, "card1");
@@ -609,7 +680,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(btnInfoAboutFornecedores, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(81, 81, 81)
                 .addComponent(btnInfoAboutProd, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(355, Short.MAX_VALUE))
+                .addContainerGap(374, Short.MAX_VALUE))
             .addComponent(lblInfoAbout1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         pnlOptionsInfoLayout.setVerticalGroup(
@@ -764,6 +835,7 @@ public class Inicio extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
+        tblProdutos.setRowHeight(40);
         tblProdutos.setShowGrid(true);
         scrlTabProdutos.setViewportView(tblProdutos);
         if (tblProdutos.getColumnModel().getColumnCount() > 0) {
@@ -788,9 +860,9 @@ public class Inicio extends javax.swing.JFrame {
                         .addComponent(btnAdicionaProd, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(60, 60, 60)
                         .addComponent(btnPesquisaProd, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 62, Short.MAX_VALUE)
                         .addComponent(btnDeleteItemProd, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18))))
+                        .addGap(35, 35, 35))))
         );
         pnlProdutosInfoLayout.setVerticalGroup(
             pnlProdutosInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -803,7 +875,7 @@ public class Inicio extends javax.swing.JFrame {
                     .addComponent(btnPesquisaProd)
                     .addComponent(btnDeleteItemProd))
                 .addGap(18, 18, 18)
-                .addComponent(scrlTabProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, 684, Short.MAX_VALUE))
+                .addComponent(scrlTabProdutos, javax.swing.GroupLayout.DEFAULT_SIZE, 686, Short.MAX_VALUE))
         );
 
         pnlAboutInfo.add(pnlProdutosInfo, "DadosCard3");
@@ -910,6 +982,7 @@ public class Inicio extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
+        tblFornecedores.setRowHeight(40);
         tblFornecedores.setShowGrid(true);
         scrlTabFornecedores.setViewportView(tblFornecedores);
 
@@ -926,11 +999,11 @@ public class Inicio extends javax.swing.JFrame {
                         .addComponent(btnEditarForn, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(60, 60, 60)
                         .addComponent(btnAdicionaForne, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 72, Short.MAX_VALUE)
-                        .addComponent(btnPesquisaForne, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(60, 60, 60)
+                        .addComponent(btnPesquisaForne, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
                         .addComponent(btnDeleteItemForne, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())))
+                        .addGap(37, 37, 37))))
         );
         pnlFornecedoresInfoLayout.setVerticalGroup(
             pnlFornecedoresInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -943,7 +1016,7 @@ public class Inicio extends javax.swing.JFrame {
                     .addComponent(btnPesquisaForne)
                     .addComponent(btnDeleteItemForne))
                 .addGap(18, 18, 18)
-                .addComponent(scrlTabFornecedores, javax.swing.GroupLayout.DEFAULT_SIZE, 684, Short.MAX_VALUE))
+                .addComponent(scrlTabFornecedores, javax.swing.GroupLayout.DEFAULT_SIZE, 686, Short.MAX_VALUE))
         );
 
         pnlAboutInfo.add(pnlFornecedoresInfo, "DadosCard2");
@@ -979,6 +1052,11 @@ public class Inicio extends javax.swing.JFrame {
                 btnCriarCardapioMousePressed(evt);
             }
         });
+        btnCriarCardapio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCriarCardapioActionPerformed(evt);
+            }
+        });
 
         lblCardapioInfo.setFont(new java.awt.Font("Segoe UI", 0, 54)); // NOI18N
         lblCardapioInfo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -993,7 +1071,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(btnVerCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(81, 81, 81)
                 .addComponent(btnCriarCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(355, Short.MAX_VALUE))
+                .addContainerGap(374, Short.MAX_VALUE))
             .addGroup(pnlCardapioInfoLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblCardapioInfo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -1007,10 +1085,12 @@ public class Inicio extends javax.swing.JFrame {
                 .addGroup(pnlCardapioInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnCriarCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnVerCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(360, Short.MAX_VALUE))
+                .addContainerGap(362, Short.MAX_VALUE))
         );
 
         pnlCardapioOpt.add(pnlCardapioInfo, "cardCardapioInfo");
+
+        pnlVerCardapio.setBackground(new java.awt.Color(255, 255, 255));
 
         lblVerCardapio.setBackground(new java.awt.Color(23, 136, 44));
         lblVerCardapio.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
@@ -1019,8 +1099,24 @@ public class Inicio extends javax.swing.JFrame {
         lblVerCardapio.setText("Cardápio");
         lblVerCardapio.setOpaque(true);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblCardapioMes.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
                 {null, null, null, null, null},
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -1038,39 +1134,23 @@ public class Inicio extends javax.swing.JFrame {
                 return types [columnIndex];
             }
         });
-        jTable1.setRowHeight(40);
-        jTable1.setShowGrid(true);
-        scrlTabCardapio.setViewportView(jTable1);
+        tblCardapioMes.setRowHeight(40);
+        tblCardapioMes.setShowGrid(true);
+        scrlTabCardapio.setViewportView(tblCardapioMes);
 
-        btnPesquisarCardapio.setBackground(new java.awt.Color(0, 102, 0));
-        btnPesquisarCardapio.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnPesquisarCardapio.setForeground(new java.awt.Color(255, 255, 255));
-        btnPesquisarCardapio.setText("Pesquisar");
-        btnPesquisarCardapio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPesquisarCardapioActionPerformed(evt);
-            }
-        });
+        lblDataCardapio.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblDataCardapio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblDataCardapio.setText("08/06 á 12/06/2023");
 
-        btnEditarCardapio.setBackground(new java.awt.Color(0, 102, 0));
-        btnEditarCardapio.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnEditarCardapio.setForeground(new java.awt.Color(255, 255, 255));
-        btnEditarCardapio.setText("Editar");
-        btnEditarCardapio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEditarCardapioActionPerformed(evt);
-            }
-        });
+        lblProximoIcon.setBackground(new java.awt.Color(26, 82, 41));
+        lblProximoIcon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblProximoIcon.setIcon(new javax.swing.ImageIcon("D:\\CursoJava\\Prototipo-iFstorage\\src\\main\\java\\com\\mycompany\\ifstorage\\images\\direita_icon.png")); // NOI18N
+        lblProximoIcon.setOpaque(true);
 
-        btnDeletarCardapio.setBackground(new java.awt.Color(0, 102, 0));
-        btnDeletarCardapio.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnDeletarCardapio.setForeground(new java.awt.Color(255, 255, 255));
-        btnDeletarCardapio.setText("Editar");
-        btnDeletarCardapio.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnDeletarCardapioActionPerformed(evt);
-            }
-        });
+        lblAnteriorIcon.setBackground(new java.awt.Color(26, 82, 41));
+        lblAnteriorIcon.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblAnteriorIcon.setIcon(new javax.swing.ImageIcon("D:\\CursoJava\\Prototipo-iFstorage\\src\\main\\java\\com\\mycompany\\ifstorage\\images\\esquerda_icon.png")); // NOI18N
+        lblAnteriorIcon.setOpaque(true);
 
         javax.swing.GroupLayout pnlVerCardapioLayout = new javax.swing.GroupLayout(pnlVerCardapio);
         pnlVerCardapio.setLayout(pnlVerCardapioLayout);
@@ -1078,14 +1158,14 @@ public class Inicio extends javax.swing.JFrame {
             pnlVerCardapioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(lblVerCardapio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(pnlVerCardapioLayout.createSequentialGroup()
-                .addGap(120, 120, 120)
-                .addComponent(btnPesquisarCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(98, 98, 98)
-                .addComponent(btnEditarCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(98, 98, 98)
-                .addComponent(btnDeletarCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 254, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(142, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlVerCardapioLayout.createSequentialGroup()
+                .addGap(92, 92, 92)
+                .addComponent(lblAnteriorIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(330, 330, 330)
+                .addComponent(lblDataCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 347, Short.MAX_VALUE)
+                .addComponent(lblProximoIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(112, 112, 112))
+            .addGroup(pnlVerCardapioLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(scrlTabCardapio)
                 .addContainerGap())
@@ -1094,164 +1174,241 @@ public class Inicio extends javax.swing.JFrame {
             pnlVerCardapioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlVerCardapioLayout.createSequentialGroup()
                 .addComponent(lblVerCardapio)
-                .addGap(18, 18, 18)
-                .addGroup(pnlVerCardapioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnPesquisarCardapio)
-                    .addComponent(btnEditarCardapio)
-                    .addComponent(btnDeletarCardapio))
-                .addGap(18, 18, 18)
-                .addComponent(scrlTabCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 586, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(pnlVerCardapioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlVerCardapioLayout.createSequentialGroup()
+                        .addGap(29, 29, 29)
+                        .addComponent(lblDataCardapio))
+                    .addGroup(pnlVerCardapioLayout.createSequentialGroup()
+                        .addGap(13, 13, 13)
+                        .addComponent(lblAnteriorIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlVerCardapioLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lblProximoIcon, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(scrlTabCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 682, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
         pnlCardapioOpt.add(pnlVerCardapio, "cardVerCardapio");
 
-        lblEscolhaDia.setFont(new java.awt.Font("Segoe UI", 0, 54)); // NOI18N
-        lblEscolhaDia.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblEscolhaDia.setText("Escolha um dia da semana para criar um cardápio");
+        lblCriaCardapioTitle.setBackground(new java.awt.Color(23, 136, 44));
+        lblCriaCardapioTitle.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        lblCriaCardapioTitle.setForeground(new java.awt.Color(255, 255, 255));
+        lblCriaCardapioTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblCriaCardapioTitle.setText("Cardápio");
+        lblCriaCardapioTitle.setOpaque(true);
 
-        btnEscolhaTerca.setBackground(new java.awt.Color(23, 136, 44));
-        btnEscolhaTerca.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnEscolhaTerca.setForeground(new java.awt.Color(255, 255, 255));
-        btnEscolhaTerca.setText("Terça");
+        lblPesqProdCardapio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblPesqProdCardapio.setText("Pesquisar:");
 
-        btnEscolhaSegunda.setBackground(new java.awt.Color(23, 136, 44));
-        btnEscolhaSegunda.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnEscolhaSegunda.setForeground(new java.awt.Color(255, 255, 255));
-        btnEscolhaSegunda.setText("Segunda");
-
-        btnEscolhaQuarta.setBackground(new java.awt.Color(23, 136, 44));
-        btnEscolhaQuarta.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnEscolhaQuarta.setForeground(new java.awt.Color(255, 255, 255));
-        btnEscolhaQuarta.setText("Quarta");
-
-        btnEscolhaSexta.setBackground(new java.awt.Color(23, 136, 44));
-        btnEscolhaSexta.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnEscolhaSexta.setForeground(new java.awt.Color(255, 255, 255));
-        btnEscolhaSexta.setText("Sexta");
-        btnEscolhaSexta.addActionListener(new java.awt.event.ActionListener() {
+        tfPesquisaProdutoCardapio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        tfPesquisaProdutoCardapio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEscolhaSextaActionPerformed(evt);
+                tfPesquisaProdutoCardapioActionPerformed(evt);
             }
         });
 
-        btnEscolhaQuinta.setBackground(new java.awt.Color(23, 136, 44));
-        btnEscolhaQuinta.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        btnEscolhaQuinta.setForeground(new java.awt.Color(255, 255, 255));
-        btnEscolhaQuinta.setText("Quinta");
-        btnEscolhaQuinta.addActionListener(new java.awt.event.ActionListener() {
+        tblCadapioItemSelect.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "Nome", "Und.", "Qtd."
+            }
+        ));
+        tblCadapioItemSelect.setMinimumSize(new java.awt.Dimension(60, 400));
+        tblCadapioItemSelect.setRowHeight(40);
+        tblCadapioItemSelect.setShowGrid(true);
+        scrlCadapioItemSelect.setViewportView(tblCadapioItemSelect);
+        if (tblCadapioItemSelect.getColumnModel().getColumnCount() > 0) {
+            tblCadapioItemSelect.getColumnModel().getColumn(1).setMaxWidth(120);
+            tblCadapioItemSelect.getColumnModel().getColumn(2).setMaxWidth(120);
+        }
+
+        tblProdutosDisponiveisCardapio.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Código", "Nome"
+            }
+        ));
+        tblProdutosDisponiveisCardapio.setRowHeight(40);
+        tblProdutosDisponiveisCardapio.setShowGrid(true);
+        tblProdutosDisponiveisCardapio.setShowHorizontalLines(true);
+        scrlListProdutosCardapio.setViewportView(tblProdutosDisponiveisCardapio);
+        if (tblProdutosDisponiveisCardapio.getColumnModel().getColumnCount() > 0) {
+            tblProdutosDisponiveisCardapio.getColumnModel().getColumn(0).setMaxWidth(120);
+        }
+
+        lblTitleDataCard.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        lblTitleDataCard.setText("Data:");
+
+        tfSelectDataCardapio.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        tfSelectDataCardapio.setText("06/04/2023");
+        tfSelectDataCardapio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEscolhaQuintaActionPerformed(evt);
+                tfSelectDataCardapioActionPerformed(evt);
             }
         });
 
-        lblDiaSemana.setBackground(new java.awt.Color(23, 136, 44));
-        lblDiaSemana.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        lblDiaSemana.setForeground(new java.awt.Color(255, 255, 255));
-        lblDiaSemana.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblDiaSemana.setText("Cardápio");
-        lblDiaSemana.setOpaque(true);
+        lblDiaSemanaCardapio.setBackground(new java.awt.Color(23, 136, 44));
+        lblDiaSemanaCardapio.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        lblDiaSemanaCardapio.setForeground(new java.awt.Color(255, 255, 255));
+        lblDiaSemanaCardapio.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblDiaSemanaCardapio.setText("QUINTA-FEIRA");
+        lblDiaSemanaCardapio.setOpaque(true);
 
-        javax.swing.GroupLayout pnlEscolhaDiaLayout = new javax.swing.GroupLayout(pnlEscolhaDia);
-        pnlEscolhaDia.setLayout(pnlEscolhaDiaLayout);
-        pnlEscolhaDiaLayout.setHorizontalGroup(
-            pnlEscolhaDiaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblEscolhaDia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlEscolhaDiaLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(pnlEscolhaDiaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnEscolhaSexta, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnEscolhaQuinta, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnEscolhaQuarta, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnEscolhaTerca, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnEscolhaSegunda, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(487, 487, 487))
-            .addComponent(lblDiaSemana, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        pnlEscolhaDiaLayout.setVerticalGroup(
-            pnlEscolhaDiaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlEscolhaDiaLayout.createSequentialGroup()
-                .addComponent(lblDiaSemana)
-                .addGap(50, 50, 50)
-                .addComponent(lblEscolhaDia)
-                .addGap(77, 77, 77)
-                .addComponent(btnEscolhaSegunda, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
-                .addComponent(btnEscolhaTerca, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(btnEscolhaQuarta, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
-                .addComponent(btnEscolhaQuinta, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addComponent(btnEscolhaSexta, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(183, Short.MAX_VALUE))
-        );
+        btnLimparCard.setBackground(new java.awt.Color(144, 2, 8));
+        btnLimparCard.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnLimparCard.setForeground(new java.awt.Color(255, 255, 255));
+        btnLimparCard.setText("LIMPAR");
 
-        pnlCardapioOpt.add(pnlEscolhaDia, "cardEscolhaDia");
+        btnSalvarCard.setBackground(new java.awt.Color(25, 81, 40));
+        btnSalvarCard.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        btnSalvarCard.setForeground(new java.awt.Color(255, 255, 255));
+        btnSalvarCard.setText("SALVAR");
 
-        lblCardapioSegunda.setBackground(new java.awt.Color(23, 136, 44));
-        lblCardapioSegunda.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        lblCardapioSegunda.setForeground(new java.awt.Color(255, 255, 255));
-        lblCardapioSegunda.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblCardapioSegunda.setText("Cardápio");
-        lblCardapioSegunda.setOpaque(true);
+        lblDescObserva.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblDescObserva.setText("Observações:");
 
-        jPanel1.setBackground(new java.awt.Color(0, 102, 0));
+        taObservações.setColumns(20);
+        taObservações.setRows(5);
+        scrlObsPane.setViewportView(taObservações);
 
-        listaCardapioSegunda.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        listaCardapioSegunda.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Feijão tropeiro", "Feijão caldo", "Arroz branco", "Arroz a grega", "Macarrão", "Brócolis", "Alface", "Tomate", "Carne de Boi", "Carne de Porco", "Carne de Soja", "Frango", " " };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-        listaCardapioSegunda.setMaximumSize(new java.awt.Dimension(200, 400));
-        listaCardapioSegunda.setMinimumSize(new java.awt.Dimension(200, 400));
-        listaCardapioSegunda.setPreferredSize(new java.awt.Dimension(200, 400));
-        listaCardapioSegunda.setSelectionBackground(new java.awt.Color(0, 102, 0));
-        scrlCardapioSegunda.setViewportView(listaCardapioSegunda);
-        listaCardapioSegunda.setOpaque(false);
+        lblDescAvisos.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lblDescAvisos.setText("Avisos:");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 224, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(scrlCardapioSegunda, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 312, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel1Layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(scrlCardapioSegunda, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-        );
+        taAvisos.setColumns(20);
+        taAvisos.setRows(5);
+        scrlAvsPane.setViewportView(taAvisos);
 
-        javax.swing.GroupLayout pnlCardapioSegundaLayout = new javax.swing.GroupLayout(pnlCardapioSegunda);
-        pnlCardapioSegunda.setLayout(pnlCardapioSegundaLayout);
-        pnlCardapioSegundaLayout.setHorizontalGroup(
-            pnlCardapioSegundaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblCardapioSegunda, javax.swing.GroupLayout.DEFAULT_SIZE, 1220, Short.MAX_VALUE)
-            .addGroup(pnlCardapioSegundaLayout.createSequentialGroup()
-                .addGap(155, 155, 155)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        javax.swing.GroupLayout pnlCriarCardapioLayout = new javax.swing.GroupLayout(pnlCriarCardapio);
+        pnlCriarCardapio.setLayout(pnlCriarCardapioLayout);
+        pnlCriarCardapioLayout.setHorizontalGroup(
+            pnlCriarCardapioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblCriaCardapioTitle, javax.swing.GroupLayout.DEFAULT_SIZE, 1239, Short.MAX_VALUE)
+            .addGroup(pnlCriarCardapioLayout.createSequentialGroup()
+                .addGroup(pnlCriarCardapioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlCriarCardapioLayout.createSequentialGroup()
+                        .addGap(50, 50, 50)
+                        .addComponent(lblPesqProdCardapio)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(tfPesquisaProdutoCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 177, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(126, 126, 126)
+                        .addComponent(lblTitleDataCard)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(tfSelectDataCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblDiaSemanaCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 276, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlCriarCardapioLayout.createSequentialGroup()
+                        .addGap(27, 27, 27)
+                        .addComponent(scrlListProdutosCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(pnlCriarCardapioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlCriarCardapioLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(scrlCadapioItemSelect, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(46, 46, 46)
+                                .addGroup(pnlCriarCardapioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCriarCardapioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(lblDescObserva, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(scrlObsPane, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(lblDescAvisos, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(scrlAvsPane, javax.swing.GroupLayout.PREFERRED_SIZE, 290, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(pnlCriarCardapioLayout.createSequentialGroup()
+                                .addGap(48, 48, 48)
+                                .addComponent(btnLimparCard, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(36, 36, 36)
+                                .addComponent(btnSalvarCard, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        pnlCardapioSegundaLayout.setVerticalGroup(
-            pnlCardapioSegundaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlCardapioSegundaLayout.createSequentialGroup()
-                .addComponent(lblCardapioSegunda)
-                .addGap(65, 65, 65)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(388, Short.MAX_VALUE))
+        pnlCriarCardapioLayout.setVerticalGroup(
+            pnlCriarCardapioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlCriarCardapioLayout.createSequentialGroup()
+                .addComponent(lblCriaCardapioTitle)
+                .addGroup(pnlCriarCardapioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlCriarCardapioLayout.createSequentialGroup()
+                        .addGroup(pnlCriarCardapioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(pnlCriarCardapioLayout.createSequentialGroup()
+                                .addGap(22, 22, 22)
+                                .addGroup(pnlCriarCardapioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(tfPesquisaProdutoCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblPesqProdCardapio)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlCriarCardapioLayout.createSequentialGroup()
+                                .addGap(19, 19, 19)
+                                .addGroup(pnlCriarCardapioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(lblTitleDataCard)
+                                    .addComponent(tfSelectDataCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(scrlListProdutosCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 611, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlCriarCardapioLayout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(lblDiaSemanaCardapio, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(pnlCriarCardapioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(pnlCriarCardapioLayout.createSequentialGroup()
+                                .addGap(25, 25, 25)
+                                .addComponent(lblDescObserva)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(scrlObsPane, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(36, 36, 36)
+                                .addComponent(lblDescAvisos)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(scrlAvsPane))
+                            .addGroup(pnlCriarCardapioLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(scrlCadapioItemSelect, javax.swing.GroupLayout.PREFERRED_SIZE, 552, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(pnlCriarCardapioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btnLimparCard, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnSalvarCard, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 4, Short.MAX_VALUE)))
+                .addContainerGap(85, Short.MAX_VALUE))
         );
 
-        pnlCardapioOpt.add(pnlCardapioSegunda, "card5");
+        pnlCardapioOpt.add(pnlCriarCardapio, "criaCad");
 
         pnlContent.add(pnlCardapioOpt, "cardCardapioOpt");
 
@@ -1309,7 +1466,7 @@ public class Inicio extends javax.swing.JFrame {
                     .addComponent(btnReportOpt4, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnReportOpt5, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnReportOpt6, javax.swing.GroupLayout.PREFERRED_SIZE, 327, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(238, Short.MAX_VALUE))
+                .addContainerGap(257, Short.MAX_VALUE))
             .addComponent(lblReportOpt, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         pnlReportOptLayout.setVerticalGroup(
@@ -1329,10 +1486,177 @@ public class Inicio extends javax.swing.JFrame {
                 .addGroup(pnlReportOptLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnReportOpt3, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnReportOpt6, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(193, Short.MAX_VALUE))
+                .addContainerGap(195, Short.MAX_VALUE))
         );
 
         pnlContent.add(pnlReportOpt, "card4");
+
+        lblProdutosTitle1.setBackground(new java.awt.Color(23, 136, 44));
+        lblProdutosTitle1.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        lblProdutosTitle1.setForeground(new java.awt.Color(255, 255, 255));
+        lblProdutosTitle1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblProdutosTitle1.setText("Produtos em Estoque");
+        lblProdutosTitle1.setOpaque(true);
+
+        tbProdutosEstoque.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Código", "Nome", "Und.", "Quantidade", "N. Nota"
+            }
+        ));
+        tbProdutosEstoque.setRowHeight(40);
+        tbProdutosEstoque.setShowGrid(true);
+        scrlProdutosEstoque.setViewportView(tbProdutosEstoque);
+        if (tbProdutosEstoque.getColumnModel().getColumnCount() > 0) {
+            tbProdutosEstoque.getColumnModel().getColumn(0).setMinWidth(150);
+            tbProdutosEstoque.getColumnModel().getColumn(0).setPreferredWidth(160);
+            tbProdutosEstoque.getColumnModel().getColumn(0).setMaxWidth(200);
+            tbProdutosEstoque.getColumnModel().getColumn(2).setMinWidth(150);
+            tbProdutosEstoque.getColumnModel().getColumn(2).setPreferredWidth(160);
+            tbProdutosEstoque.getColumnModel().getColumn(2).setMaxWidth(200);
+            tbProdutosEstoque.getColumnModel().getColumn(3).setMinWidth(150);
+            tbProdutosEstoque.getColumnModel().getColumn(3).setPreferredWidth(160);
+            tbProdutosEstoque.getColumnModel().getColumn(3).setMaxWidth(200);
+            tbProdutosEstoque.getColumnModel().getColumn(4).setMinWidth(280);
+            tbProdutosEstoque.getColumnModel().getColumn(4).setPreferredWidth(280);
+            tbProdutosEstoque.getColumnModel().getColumn(4).setMaxWidth(300);
+        }
+
+        btnSelectOption.setBackground(new java.awt.Color(0, 102, 0));
+        btnSelectOption.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnSelectOption.setForeground(new java.awt.Color(255, 255, 255));
+        btnSelectOption.setText("IFNMG");
+        btnSelectOption.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnSelectOptionMousePressed(evt);
+            }
+        });
+        btnSelectOption.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSelectOptionActionPerformed(evt);
+            }
+        });
+
+        btnPesquisaProdEstoque.setBackground(new java.awt.Color(0, 102, 0));
+        btnPesquisaProdEstoque.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnPesquisaProdEstoque.setForeground(new java.awt.Color(255, 255, 255));
+        btnPesquisaProdEstoque.setText("Pesquisar");
+        btnPesquisaProdEstoque.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnPesquisaProdEstoqueMousePressed(evt);
+            }
+        });
+        btnPesquisaProdEstoque.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPesquisaProdEstoqueActionPerformed(evt);
+            }
+        });
+
+        btnAdicionaProdEstoque.setBackground(new java.awt.Color(0, 102, 0));
+        btnAdicionaProdEstoque.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnAdicionaProdEstoque.setForeground(new java.awt.Color(255, 255, 255));
+        btnAdicionaProdEstoque.setText("Adicionar");
+        btnAdicionaProdEstoque.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnAdicionaProdEstoqueMousePressed(evt);
+            }
+        });
+        btnAdicionaProdEstoque.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdicionaProdEstoqueActionPerformed(evt);
+            }
+        });
+
+        btnEditarProdEstoque.setBackground(new java.awt.Color(0, 102, 0));
+        btnEditarProdEstoque.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnEditarProdEstoque.setForeground(new java.awt.Color(255, 255, 255));
+        btnEditarProdEstoque.setText("Editar");
+        btnEditarProdEstoque.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnEditarProdEstoqueMousePressed(evt);
+            }
+        });
+
+        btnDeleteIetProdEstoque.setBackground(new java.awt.Color(0, 102, 0));
+        btnDeleteIetProdEstoque.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        btnDeleteIetProdEstoque.setForeground(new java.awt.Color(255, 255, 255));
+        btnDeleteIetProdEstoque.setText("Deletar");
+        btnDeleteIetProdEstoque.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                btnDeleteIetProdEstoqueMousePressed(evt);
+            }
+        });
+        btnDeleteIetProdEstoque.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteIetProdEstoqueActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pnlEstoqueOptionsLayout = new javax.swing.GroupLayout(pnlEstoqueOptions);
+        pnlEstoqueOptions.setLayout(pnlEstoqueOptionsLayout);
+        pnlEstoqueOptionsLayout.setHorizontalGroup(
+            pnlEstoqueOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(lblProdutosTitle1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(pnlEstoqueOptionsLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlEstoqueOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(scrlProdutosEstoque)
+                    .addGroup(pnlEstoqueOptionsLayout.createSequentialGroup()
+                        .addComponent(btnEditarProdEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(btnAdicionaProdEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(btnPesquisaProdEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(btnDeleteIetProdEstoque, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(30, 30, 30)
+                        .addComponent(btnSelectOption, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        pnlEstoqueOptionsLayout.setVerticalGroup(
+            pnlEstoqueOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlEstoqueOptionsLayout.createSequentialGroup()
+                .addComponent(lblProdutosTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(pnlEstoqueOptionsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnSelectOption)
+                    .addComponent(btnEditarProdEstoque)
+                    .addComponent(btnAdicionaProdEstoque)
+                    .addComponent(btnPesquisaProdEstoque)
+                    .addComponent(btnDeleteIetProdEstoque))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(scrlProdutosEstoque, javax.swing.GroupLayout.DEFAULT_SIZE, 686, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        pnlContent.add(pnlEstoqueOptions, "EstoqueCard");
 
         pnlFundo.add(pnlContent, java.awt.BorderLayout.CENTER);
 
@@ -1366,6 +1690,7 @@ public class Inicio extends javax.swing.JFrame {
         setColor(pnlDados);
         resetColor(pnlCardapio);
         resetColor(pnlRelatorio);
+        resetColor(pnlEstoque);
 
         cardLayout_options.show(pnlContent, "card2");
         cardLayout_dados.show(pnlAboutInfo, "DadosCard1");
@@ -1384,6 +1709,7 @@ public class Inicio extends javax.swing.JFrame {
         setColor(pnlCardapio);
         resetColor(pnlDados);
         resetColor(pnlRelatorio);
+        resetColor(pnlEstoque);
 
         cardLayout_options.show(pnlContent, "cardCardapioOpt");
         cardLayout_cardapio.show(pnlCardapioOpt, "cardCardapioInfo");
@@ -1399,6 +1725,7 @@ public class Inicio extends javax.swing.JFrame {
         resetColor(pnlCardapio);
         resetColor(pnlDados);
         setColor(pnlRelatorio);
+        resetColor(pnlEstoque);
 
         cardLayout_options.show(pnlContent, "card4");
     }//GEN-LAST:event_pnlRelatorioMousePressed
@@ -1433,24 +1760,9 @@ public class Inicio extends javax.swing.JFrame {
         cardLayout_cardapio.show(pnlCardapioOpt, "cardVerCardapio");        // TODO add your handling code here:
     }//GEN-LAST:event_btnVerCardapioMousePressed
 
-    private void btnEscolhaQuintaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEscolhaQuintaActionPerformed
-    }//GEN-LAST:event_btnEscolhaQuintaActionPerformed
-
-    private void btnEscolhaSextaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEscolhaSextaActionPerformed
-    }//GEN-LAST:event_btnEscolhaSextaActionPerformed
-
     private void btnCriarCardapioMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCriarCardapioMousePressed
-        cardLayout_cardapio.show(pnlCardapioOpt, "cardEscolhaDia");        // TODO add your handling code here:
+        cardLayout_cardapio.show(pnlCardapioOpt, "criaCad");        // TODO add your handling code here:
     }//GEN-LAST:event_btnCriarCardapioMousePressed
-
-    private void btnPesquisarCardapioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisarCardapioActionPerformed
-    }//GEN-LAST:event_btnPesquisarCardapioActionPerformed
-
-    private void btnEditarCardapioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarCardapioActionPerformed
-    }//GEN-LAST:event_btnEditarCardapioActionPerformed
-
-    private void btnDeletarCardapioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeletarCardapioActionPerformed
-    }//GEN-LAST:event_btnDeletarCardapioActionPerformed
 
      //Definindo ações para os botões da tabela de forncedores
     private void btnAdicionaForneMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdicionaForneMousePressed
@@ -1564,6 +1876,107 @@ public class Inicio extends javax.swing.JFrame {
         contentPane.setBorder(BorderFactory.createLineBorder(Color.black));
     }//GEN-LAST:event_btnEditarProdMousePressed
 
+    private void tfPesquisaProdutoCardapioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfPesquisaProdutoCardapioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfPesquisaProdutoCardapioActionPerformed
+
+    private void tfSelectDataCardapioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tfSelectDataCardapioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_tfSelectDataCardapioActionPerformed
+
+    private void btnCriarCardapioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCriarCardapioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCriarCardapioActionPerformed
+
+    private void pnlEstoqueMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_pnlEstoqueMousePressed
+        resetColor(pnlCardapio);
+        resetColor(pnlDados);
+        resetColor(pnlRelatorio);
+        setColor(pnlEstoque);
+        
+
+        cardLayout_options.show(pnlContent, "EstoqueCard");
+    }//GEN-LAST:event_pnlEstoqueMousePressed
+
+    private void btnSelectOptionMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnSelectOptionMousePressed
+        if(btnSelectOption.getText().equals("IFNMG")){
+            btnSelectOption.setText("Empenho");
+            btnSelectOption.setBackground(new Color(144,2,8));
+        }
+        else{
+            btnSelectOption.setText("IFNMG");
+            btnSelectOption.setBackground(new Color(25,81,40));
+        }
+        
+        
+    }//GEN-LAST:event_btnSelectOptionMousePressed
+
+    private void btnSelectOptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSelectOptionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSelectOptionActionPerformed
+
+    private void btnPesquisaProdEstoqueMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnPesquisaProdEstoqueMousePressed
+        PesqProduto pesq = new PesqProduto();
+        
+        pesq.setVisible(true);
+        pesq.setSize(457, 400);
+        pesq.setLocationRelativeTo(null); // Centraliza o JFrame na tela
+        pesq.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        pesq.setAlwaysOnTop(true);
+        
+        JPanel contentPane = (JPanel) pesq.getContentPane();
+        contentPane.setBorder(BorderFactory.createLineBorder(Color.black));
+    }//GEN-LAST:event_btnPesquisaProdEstoqueMousePressed
+
+    private void btnPesquisaProdEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPesquisaProdEstoqueActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnPesquisaProdEstoqueActionPerformed
+
+    private void btnAdicionaProdEstoqueMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnAdicionaProdEstoqueMousePressed
+        InProdEstoq prod = new InProdEstoq();
+        
+        prod.setVisible(true);
+        prod.setSize(457, 420);
+        prod.setLocationRelativeTo(null); // Centraliza o JFrame na tela
+        prod.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE );
+        
+        JPanel contentPane = (JPanel) prod.getContentPane();
+        contentPane.setBorder(BorderFactory.createLineBorder(Color.black));
+    }//GEN-LAST:event_btnAdicionaProdEstoqueMousePressed
+
+    private void btnAdicionaProdEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicionaProdEstoqueActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAdicionaProdEstoqueActionPerformed
+
+    private void btnEditarProdEstoqueMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEditarProdEstoqueMousePressed
+        InProdEstoq prod = new InProdEstoq();
+        
+        prod.setVisible(true);
+        prod.setSize(457, 420);
+        prod.setLocationRelativeTo(null); // Centraliza o JFrame na tela
+        prod.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE );
+        
+        JPanel contentPane = (JPanel) prod.getContentPane();
+        contentPane.setBorder(BorderFactory.createLineBorder(Color.black));
+    }//GEN-LAST:event_btnEditarProdEstoqueMousePressed
+
+    private void btnDeleteIetProdEstoqueMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnDeleteIetProdEstoqueMousePressed
+        Exclusao excl = new Exclusao();
+        
+        excl.setVisible(true);
+        excl.setSize(457, 400);
+        excl.setLocationRelativeTo(null); // Centraliza o JFrame na tela
+        excl.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        excl.setAlwaysOnTop(true);
+        
+        JPanel contentPane = (JPanel) excl.getContentPane();
+        contentPane.setBorder(BorderFactory.createLineBorder(Color.black));
+    }//GEN-LAST:event_btnDeleteIetProdEstoqueMousePressed
+
+    private void btnDeleteIetProdEstoqueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteIetProdEstoqueActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDeleteIetProdEstoqueActionPerformed
+
     
     public static void main(String args[]) {
         
@@ -1577,39 +1990,40 @@ public class Inicio extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdicionaForne;
     private javax.swing.JButton btnAdicionaProd;
+    private javax.swing.JButton btnAdicionaProdEstoque;
     private javax.swing.JButton btnCriarCardapio;
-    private javax.swing.JButton btnDeletarCardapio;
+    private javax.swing.JButton btnDeleteIetProdEstoque;
     private javax.swing.JButton btnDeleteItemForne;
     private javax.swing.JButton btnDeleteItemProd;
-    private javax.swing.JButton btnEditarCardapio;
     private javax.swing.JButton btnEditarForn;
     private javax.swing.JButton btnEditarProd;
-    private javax.swing.JButton btnEscolhaQuarta;
-    private javax.swing.JButton btnEscolhaQuinta;
-    private javax.swing.JButton btnEscolhaSegunda;
-    private javax.swing.JButton btnEscolhaSexta;
-    private javax.swing.JButton btnEscolhaTerca;
+    private javax.swing.JButton btnEditarProdEstoque;
     private javax.swing.JButton btnInfoAboutFornecedores;
     private javax.swing.JButton btnInfoAboutProd;
+    private javax.swing.JButton btnLimparCard;
     private javax.swing.JButton btnPesquisaForne;
     private javax.swing.JButton btnPesquisaProd;
-    private javax.swing.JButton btnPesquisarCardapio;
+    private javax.swing.JButton btnPesquisaProdEstoque;
     private javax.swing.JButton btnReportOpt1;
     private javax.swing.JButton btnReportOpt2;
     private javax.swing.JButton btnReportOpt3;
     private javax.swing.JButton btnReportOpt4;
     private javax.swing.JButton btnReportOpt5;
     private javax.swing.JButton btnReportOpt6;
+    private javax.swing.JButton btnSalvarCard;
+    private javax.swing.JButton btnSelectOption;
     private javax.swing.JButton btnVerCardapio;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JTable jTable1;
+    private javax.swing.JLabel lblAnteriorIcon;
     private javax.swing.JLabel lblBackgroundImage;
     private javax.swing.JLabel lblCardapio;
     private javax.swing.JLabel lblCardapioInfo;
-    private javax.swing.JLabel lblCardapioSegunda;
+    private javax.swing.JLabel lblCriaCardapioTitle;
     private javax.swing.JLabel lblDados;
-    private javax.swing.JLabel lblDiaSemana;
-    private javax.swing.JLabel lblEscolhaDia;
+    private javax.swing.JLabel lblDataCardapio;
+    private javax.swing.JLabel lblDescAvisos;
+    private javax.swing.JLabel lblDescObserva;
+    private javax.swing.JLabel lblDiaSemanaCardapio;
+    private javax.swing.JLabel lblEstoque;
     private javax.swing.JLabel lblExit;
     private javax.swing.JLabel lblFornecedoresTitle;
     private javax.swing.JLabel lblInfoAbout;
@@ -1619,25 +2033,29 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JLabel lblLogo;
     private javax.swing.JLabel lblMax;
     private javax.swing.JLabel lblMin;
+    private javax.swing.JLabel lblPesqProdCardapio;
     private javax.swing.JLabel lblProdutosTitle;
+    private javax.swing.JLabel lblProdutosTitle1;
+    private javax.swing.JLabel lblProximoIcon;
     private javax.swing.JLabel lblRelatorio;
     private javax.swing.JLabel lblReportOpt;
     private javax.swing.JLabel lblTextLogo;
     private javax.swing.JLabel lblTextLogo_fundo;
+    private javax.swing.JLabel lblTitleDataCard;
     private javax.swing.JLabel lblVerCardapio;
     private javax.swing.JLabel lblVersion;
-    private javax.swing.JList<String> listaCardapioSegunda;
     private javax.swing.JPanel pnlAboutInfo;
     private javax.swing.JPanel pnlActions;
     private javax.swing.JPanel pnlBarraLeteral;
     private javax.swing.JPanel pnlCardapio;
     private javax.swing.JPanel pnlCardapioInfo;
     private javax.swing.JPanel pnlCardapioOpt;
-    private javax.swing.JPanel pnlCardapioSegunda;
     private javax.swing.JPanel pnlContent;
+    private javax.swing.JPanel pnlCriarCardapio;
     private javax.swing.JPanel pnlDados;
     private javax.swing.JPanel pnlDefaultScreen;
-    private javax.swing.JPanel pnlEscolhaDia;
+    private javax.swing.JPanel pnlEstoque;
+    private javax.swing.JPanel pnlEstoqueOptions;
     private javax.swing.JPanel pnlFornecedoresInfo;
     private javax.swing.JPanel pnlFundo;
     private javax.swing.JPanel pnlInfoAbout;
@@ -1647,11 +2065,23 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JPanel pnlReportOpt;
     private javax.swing.JPanel pnlTopBar;
     private javax.swing.JPanel pnlVerCardapio;
-    private javax.swing.JScrollPane scrlCardapioSegunda;
+    private javax.swing.JScrollPane scrlAvsPane;
+    private javax.swing.JScrollPane scrlCadapioItemSelect;
+    private javax.swing.JScrollPane scrlListProdutosCardapio;
+    private javax.swing.JScrollPane scrlObsPane;
+    private javax.swing.JScrollPane scrlProdutosEstoque;
     private javax.swing.JScrollPane scrlTabCardapio;
     private javax.swing.JScrollPane scrlTabFornecedores;
     private javax.swing.JScrollPane scrlTabProdutos;
+    private javax.swing.JTextArea taAvisos;
+    private javax.swing.JTextArea taObservações;
+    private javax.swing.JTable tbProdutosEstoque;
+    private javax.swing.JTable tblCadapioItemSelect;
+    private javax.swing.JTable tblCardapioMes;
     private javax.swing.JTable tblFornecedores;
     private javax.swing.JTable tblProdutos;
+    private javax.swing.JTable tblProdutosDisponiveisCardapio;
+    private javax.swing.JTextField tfPesquisaProdutoCardapio;
+    private javax.swing.JTextField tfSelectDataCardapio;
     // End of variables declaration//GEN-END:variables
 }
