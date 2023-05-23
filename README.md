@@ -16,5 +16,14 @@
 </p>
 
 <p align="center">
-  <img alt="" src="" width="100%">
+  <img alt="Banner iFstorage" src="image/Capa.png" width="100%">
 </p>
+
+## Design
+
+## Como executar o projeto?
+
+Primeiramente, é necessário que o JDK da Oracle seja instalado no computador para que o programa rode instalado no computador. Para instalar o JDK, entre em Download [https://www.oracle.com/java/technologies/downloads/]
+
+
+
