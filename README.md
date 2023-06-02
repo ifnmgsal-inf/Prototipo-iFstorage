@@ -5,9 +5,9 @@
 </p>
 
 <p align="center">
-  <a href="#-design"> Design Geral </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-design-das-telas"> Design das Telas </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#-como-executar-o-projeto"> Como Executar? </a>&nbsp;&nbsp;&nbsp;
+  <a href="#design"> Design Geral </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#design-das-telas"> Design das Telas </a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#como-executar-o-projeto"> Como Executar? </a>&nbsp;&nbsp;&nbsp;
 </p>
 
 <p align="center">
