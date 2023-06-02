@@ -35,7 +35,7 @@ Por fim, as cores desempenham um papel fundamental na criação da identidade vi
 Em suma, o processo de desenvolvimento da identidade visual do sistema foi permeado por discussões e reflexões sobre como transmitir a essência do IFNMG e garantir sua adaptabilidade para outras instituições. A escolha do nome "IFstorage" e a criação de uma logo que remete ao conceito de depósito, juntamente com o uso das cores oficiais do IFNMG, compõem uma identidade visual que é ao mesmo tempo distintiva, representativa e flexível.
 
 <p align="center">
-  <img alt="Exemplo Design" src="image/IFstorage_Design.png" width="27%">
+  <img alt="Exemplo Design" src="image/IFstorage_design.png" width="27%">
 </p>
 
 <p align="center">
