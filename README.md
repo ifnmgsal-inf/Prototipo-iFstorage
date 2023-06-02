@@ -21,6 +21,23 @@
 
 ## Design
 
+Durante o processo de desenvolvimento da identidade visual do sistema, surgiu a brilhante ideia de explorar a possibilidade de sua utilização por outras instituições. Foi nesse momento que nos empenhamos em criar uma identidade visual que não só refletisse a essência do IFNMG, mas também pudesse ser facilmente adaptada e adotada por diferentes organizações.
+
+Nesse sentido, buscamos estabelecer uma conexão visual com o IFNMG, valendo-nos das mesmas cores e padrões visuais presentes em sua identidade visual original. Acreditamos que isso não apenas ajudaria a reforçar a associação com a instituição, mas também facilitaria a identificação do sistema por parte dos usuários, criando uma sensação de familiaridade.
+
+Quanto ao nome, foi um processo longo e minucioso de discussões e considerações. Dentre várias opções, chegamos à escolha final: "iFstorage". Essa combinação engenhosa do acrônimo "iF", representando o símbolo da instituição, com a palavra "storage", de origem inglesa e que remete a "armazenamento" ou "depósito", captura a essência do sistema de forma concisa e impactante. Optamos pelo uso do inglês por motivos estéticos, uma vez que a língua inglesa é amplamente reconhecida e possui uma sonoridade que soa agradável ao ouvido.
+
+É importante ressaltar que a escolha da palavra em inglês também se deve à estreita relação entre o sistema e o setor de depósito da instituição. Grande parte das informações que alimentam o sistema são provenientes desse setor, tornando-o um elemento crucial na operação e funcionalidade do sistema. Assim, a palavra "storage" não só reflete essa relação intrínseca, mas também transmite um senso de organização, segurança e confiabilidade.
+Dando continuidade à construção da identidade visual, a logo também foi concebida com um objetivo claro em mente. Indiretamente, buscamos fazer referência ao conceito de depósito, representando uma caixa que contém em seu interior a letra "i", elemento distintivo e reconhecido do logotipo do IFNMG. Essa abordagem sutil permite que a logo seja interpretada de diferentes maneiras, gerando múltiplas perspectivas e sentidos, dependendo da percepção e contexto de cada pessoa.
+
+Por fim, as cores desempenham um papel fundamental na criação da identidade visual do sistema. Decidimos utilizar as cores que representam o IFNMG, as quais consistem em duas variações de verde (uma mais escura e outra mais clara), branco e vermelho. Essas cores foram selecionadas cuidadosamente, diretamente do site oficial da instituição, a fim de garantir a coesão e harmonia visual com a marca do IFNMG.
+
+Em suma, o processo de desenvolvimento da identidade visual do sistema foi permeado por discussões e reflexões sobre como transmitir a essência do IFNMG e garantir sua adaptabilidade para outras instituições. A escolha do nome "IFstorage" e a criação de uma logo que remete ao conceito de depósito, juntamente com o uso das cores oficiais do IFNMG, compõem uma identidade visual que é ao mesmo tempo distintiva, representativa e flexível.
+
+<p align="center">
+  <img alt="Exemplo Design" src="image/IFstorage_Design" width="100%">
+</p>
+
 ## Como executar o projeto?
 
 <h3 align="center">
