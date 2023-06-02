@@ -38,6 +38,35 @@ Em suma, o processo de desenvolvimento da identidade visual do sistema foi perme
   <img alt="Exemplo Design" src="image/IFstorage_Design.png" width="30%">
 </p>
 
+<p align="center">
+  Imagem que representa as cores, logo e nome utilizados no sistema.<br>
+   Fonte: Os Autores.
+</p>
+
+## Design das Telas
+
+O sistema IFstorage foi cuidadosamente projetado com uma abordagem centrada no usuário, visando proporcionar uma experiência interativa e agradável por meio de seus diversos frames ou telas. Essa abordagem visa garantir que o usuário possa utilizar o sistema de forma intuitiva, evitando qualquer sensação de desorientação durante sua navegação.
+
+No intuito de desenvolver uma interface que atendesse a esses objetivos, a equipe responsável pelo projeto realizou uma extensa pesquisa acerca dos JFrames, os elementos essenciais para o desenvolvimento das telas em Java. Durante essa pesquisa, foram identificadas algumas limitações inerentes à linguagem Java em relação ao design e à criação de interfaces gráficas.
+
+Conscientes dessas limitações, a equipe decidiu ampliar suas pesquisas para buscar modelos de telas já desenvolvidas em Java, que pudessem servir de inspiração e referência para o projeto. Dessa forma, buscaram explorar soluções existentes e adaptá-las às necessidades específicas do IFstorage.
+
+Após a fase de pesquisa e coleta de referências, deu-se início ao processo criativo de design das telas do sistema. Utilizando as cores definidas para o projeto, a equipe trabalhou minuciosamente no desenvolvimento de layouts que transmitisse efetivamente a identidade visual desejada. Para facilitar e agilizar esse processo, optou-se pelo uso da plataforma Figma, uma poderosa ferramenta de design que permite a criação de interfaces gráficas de forma ágil e colaborativa.
+
+Por meio do Figma, foram criados wireframes e protótipos que passaram por um rigoroso processo de iterações e refinamentos. Cada elemento da interface foi cuidadosamente projetado levando em consideração a usabilidade, a acessibilidade e a estética, com o objetivo de oferecer ao usuário uma experiência agradável e intuitiva durante a interação com o sistema IFstorage.
+
+Em resumo, o desenvolvimento do design das telas do sistema IFstorage envolveu um trabalho minucioso e abrangente, desde a pesquisa inicial sobre JFrames até a criação de protótipos refinados no Figma. A equipe se empenhou em superar as limitações da linguagem Java, buscando inspiração em modelos existentes para desenvolver uma interface atraente, funcional e adaptada às necessidades do projeto. O resultado é um conjunto de telas projetadas com atenção aos detalhes, visando proporcionar aos usuários uma experiência fluida e agradável ao utilizar o sistema IFstorage.
+
+<p align="center">
+  <img alt="Exemplo Design" src="image/IFstorage_ExTelas01.png" width="30%">
+  <img alt="Exemplo Design" src="image/IFstorage_ExTelas02.png" width="30%">
+</p>
+
+<p align="center">
+  Imagens exemplificativas do resultado do desenvolvimento das telas.<br>
+  Fonte: Os Autores.
+</p>
+
 ## Como executar o projeto?
 
 <h3 align="center">
